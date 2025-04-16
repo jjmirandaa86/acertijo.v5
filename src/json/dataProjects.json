@@ -1,0 +1,302 @@
+{
+    "llamaRemovals": {
+        "id": 1,
+        "year": 2025,
+        "name": "Llama Removals",
+        "description":
+            "Llama Removals is a Sydney-based removals company specialising in providing reliable, fast and affordable relocation services for both homes and offices. The website allows users to learn about the different services available, request personalised quotes through forms, explore areas of coverage such as local and interstate removals, and easily contact through direct calls or web forms. \nThe design aims to provide confidence and facilitate quick decision-making for customers looking for a professional moving service.",
+        "descriptionTech":
+            "The site was developed using modern technologies such as React, Vite, React Router DOM, Axios, Redux, HTML, CSS, and JavaScript. These tools allowed us to create a fast and efficient SPA (Single Page Application), with dynamic routes, centralised state management, and optimised HTTP calls. I developed the Llama Removals website independently, implementing a fully responsive design optimised for desktop, tablet and mobile devices. I used React with Vite to ensure fast loading, along with Redux and Axios to handle data and API requests efficiently. \n\n  Our API integrates with Google Maps Platform to provide real-time precise location services, enhancing the accuracy of your moving service. When a customer requests a quote, the system: \n - Automatically suggests pickup and destination addresses through Google Maps autocomplete, preventing input errors. \n - Validates locations to ensure accessibility (e.g., 123 Main Street, Sydney, NSW → exact coordinates).\n - Calculates optimized moving routes with traffic and toll considerations. \n\n My goal was to create a professional, clear and fluid user experience, aligned with current web development standards.",
+        "website": "llamaremovals.com.au",
+        "websiteLong": "https://llamaremovals.com.au",
+        "platform": "Web Site (FrontEnd)",
+        "stack": "React JS, Vite, Mantine. \nReact-Router-DOM, Redux, Axios",
+        "server":
+            "Digital Ocean - Droplets (Dedicated server).\nLinux Ubuntu Distribution",
+        "gitHub": "https://github.com/jjmirandaa86/llama-removals",
+        "images": [
+            {
+                "id": 1,
+                "link": "/assets/webp/llamaremovals/Mobile.webp",
+                "alt": "WebSite - Mobile Version"
+            },
+            {
+                "id": 2,
+                "link": "/assets/webp/llamaremovals/Tablet.webp",
+                "alt": "WebSite - Tablet Version"
+            },
+            {
+                "id": 3,
+                "link": "/assets/webp/llamaremovals/Desktop.webp",
+                "alt": "WebSite - Desktop Version"
+            }
+        ],
+        "dataChart": [
+            {
+                "task": "Requirements",
+                "Jefferson": 60,
+                "Team": 40
+            },
+            {
+                "task": "Analysis",
+                "Jefferson": 70,
+                "Team": 30
+            },
+            {
+                "task": "Design",
+                "Jefferson": 35,
+                "Team": 65
+            },
+            {
+                "task": "Development",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Testing",
+                "Jefferson": 85,
+                "Team": 15
+            },
+            {
+                "task": "Deployment",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Maintenance",
+                "Jefferson": 100,
+                "Team": 0
+            }
+        ],
+        "diagram": {
+            "url": "/assets/webp/llamaremovals/Diagram.webp",
+            "alt": "Diagram process Llama Removals"
+        },
+        "carousel": 200
+
+    },
+    "learningWords": {
+        "id": 2,
+        "year": 2024,
+        "name": "Learning Words",
+        "description":
+            "Learning words is an innovative web and mobile platform designed to make learning English vocabulary interactive and personalized. The app allows users to explore, add, and organize words into categories or favorites, while tracking their progress through an intuitive learning percentage graph. Featuring a responsive design optimized for mobile, tablet, and desktop devices, Learning words delivers a seamless and accessible experience—perfect for learners looking to expand their language skills in a dynamic and visual way.",
+        "descriptionTech":
+            "The platform was built using modern web technologies, including React JS, Bootstrap, React Router DOM, Redux, and Axios, along with core tools like HTML, CSS, and JavaScript. This tech stack enabled the development of a high-performance SPA (Single Page Application) with dynamic routing, centralized state management, and optimized API interactions. As the sole developer, I built Learning Words with a fully responsive design, ensuring seamless usability across desktop, tablet, and mobile devices. Leveraging React’s component-based architecture and Bootstrap’s styling framework, I prioritized clean, intuitive UI/UX while maintaining fast load times and efficient data handling (via Redux and Axios). The result is a user-friendly application that aligns with modern development standards, offering learners a structured way to track vocabulary progress through interactive features like categorized word lists, favorites, and visual learning analytics.",
+            "website": "learningwords-pi.vercel.app",
+            "websiteLong": "https://learningwords-pi.vercel.app",
+        "platform": "Web Site (FrontEnd)",
+        "stack": "React JS, React-Router-DOM, Redux.  \n Bootstrap, Axios",
+        "server":
+            "Vercel Server",
+        "gitHub": "https://github.com/jjmirandaa86/learningwords",
+        "images": [
+            {
+                "id": 1,
+                "link": "/assets/webp/learningwords/Mobile-Loading.webp",
+                "alt": "WebSite - Mobile Version - Loading"
+            },
+            {
+                "id": 2,
+                "link": "/assets/webp/learningwords/Mobile-Login.webp",
+                "alt": "WebSite - Mobile Version - Loading"
+            },
+            {
+                "id": 3,
+                "link": "/assets/webp/learningwords/Mobile-Dashboard.webp",
+                "alt": "WebSite - Mobile Version - Dashboard"
+            },
+            {
+                "id": 4,
+                "link": "/assets/webp/learningwords/Mobile-Words.webp",
+                "alt": "WebSite - Mobile Version - Words"
+            }
+        ],
+        "dataChart": [
+            {
+                "task": "Requirements",
+                "Jefferson": 80,
+                "Team": 20
+            },
+            {
+                "task": "Analysis",
+                "Jefferson": 70,
+                "Team": 30
+            },
+            {
+                "task": "Design",
+                "Jefferson": 70,
+                "Team": 30
+            },
+            {
+                "task": "Development",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Testing",
+                "Jefferson": 85,
+                "Team": 15
+            },
+            {
+                "task": "Deployment",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Maintenance",
+                "Jefferson": 100,
+                "Team": 0
+            }
+        ],
+        "diagram": {},
+        "carousel": 300
+    },
+    "apillamaRemovals": {
+        "id": 3,
+        "year": 2025,
+        "name": "Api Llama Removals",
+        "description":
+            "The Llama Removals API is the backbone of our customer-facing platform, enabling secure and efficient interactions between our website, database, and external services. \n\nDesigned to support several request, this RESTful API handles: \n -Quote requests (via POST submissions). \n -Service/coverage area data (GET endpoints). \n -Customer communications (contact forms, call-back systems). \n -Admin operations (booking management, resource tracking). \n\n Built with MySQL for transactional reliability and JWT authentication for security, the API ensures fast, auditable operations critical for moving logistics.",
+        "descriptionTech":
+            "The Llama Removals REST API implements standard HTTP methods (GET, POST, PUT/PATCH, DELETE) to power all platform interactions. Built on a MySQL database for reliable transaction processing, the API employs Bearer token authentication to secure endpoints, with rate-limiting applied to public-facing operations. All responses follow JSON formatting with RESTful status codes (200 for successful requests, 401 for unauthorized access, etc.), ensuring predictable integration for both web and mobile clients while maintaining the speed and reliability synonymous with Llama Removals' moving services.",
+        "website": "api.llamaremovals.com.au",
+        "websiteLong": "https://api.llamaremovals.com.au",
+        "platform": "Api RESTful (BackEnd)",
+        "stack": "NodeJS, MySql, JWT,  \nPatron MVC: \n → 1. Routes  \n→ 2. Middlewares  \n→ 3. Controller  \n→ 4. Service  \n→ 5. Model  \n→ 6. DB",
+        "server":
+            "Digital Ocean - Droplets (Dedicated server). \nLinux Ubuntu Distribution (PM2)",
+        "gitHub": "https://github.com/jjmirandaa86/llama-removals-api",
+        "images": [
+            {
+                "id": 1,
+                "link": "/assets/webp/apillamaremovals/getAll.webp",
+                "alt": "BackEnd - List All User"
+            },
+            {
+                "id": 2,
+                "link": "/assets/webp/apillamaremovals/getId.webp",
+                "alt": "BackEnd - Get user by Id"
+            },
+            {
+                "id": 3,
+                "link": "/assets/webp/apillamaremovals/post.webp",
+                "alt": "BackEnd - Send Data post"
+            }
+        ],
+        "dataChart": [
+            {
+                "task": "Requirements",
+                "Jefferson": 40,
+                "Team": 60
+            },
+            {
+                "task": "Analysis",
+                "Jefferson": 90,
+                "Team": 10
+            },
+            {
+                "task": "Design",
+                "Jefferson": 90,
+                "Team": 10
+            },
+            {
+                "task": "Development",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Testing",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Deployment",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Maintenance",
+                "Jefferson": 100,
+                "Team": 0
+            }
+        ],
+        "diagram": {
+            "url": "/assets/webp/llamaremovals/Diagram.webp",
+            "alt": "Diagram process Llama Removals"
+        }, "carousel": 400
+    },
+    "surveyTesalia": {
+        "id": 4,
+        "year": 2021,
+        "name": "Survey Tesalia",
+        "description":
+            "The application is designed to streamline the management and availability of mobile devices used by sales representatives through surveys targeted at managers and commercial leaders. IT predefines inventory values, specifying the quantity and type of devices available. This data is cross-checked with the commercial team's needs, ensuring efficient alignment between existing resources and operational demands. \nThe tool provides real-time visibility into device stock, ensuring that sales teams have the necessary tools to capture orders efficiently. Additionally, it optimizes inventory control, preventing shortages or surpluses, and offers a clear framework for strategic decision-making in device distribution.",
+        "descriptionTech":
+            "The application was built with React JS on the frontend to create a dynamic and responsive interface, while PHP was used in the backend to handle business logic and database connectivity. \nSurvey data is stored and structured in JSON format, ensuring smooth data manipulation and seamless integration between layers. This technology stack enables agile data flow, secure transactions, and easy system scalability.",
+        "website": "",
+        "websiteLong": "",
+        "platform": "FrontEnd / BackEnd",
+        "stack": "React JS \nPHP",
+        "server":
+            "Internal data center Tesalia (Dedicated server).",
+        "gitHub": "https://github.com/jjmirandaa86/ttsc_encuesta",
+        "images": [
+            {
+                "id": 1,
+                "link": "/assets/webp/surveyTesalia/EncuestaFuncionario.webp",
+                "alt": "FrontEnd - Personal data"
+            },
+            {
+                "id": 2,
+                "link": "/assets/webp/surveyTesalia/EncuestaDatos.webp",
+                "alt": "FrontEnd - Location Data Mobile"
+            },
+            {
+                "id": 3,
+                "link": "/assets/webp/surveyTesalia/EncuestaEnvio.webp",
+                "alt": "FrontEnd - Send data"
+            }
+        ],
+        "dataChart": [
+            {
+                "task": "Requirements",
+                "Jefferson": 70,
+                "Team": 30
+            },
+            {
+                "task": "Analysis",
+                "Jefferson": 60,
+                "Team": 40
+            },
+            {
+                "task": "Design",
+                "Jefferson": 90,
+                "Team": 10
+            },
+            {
+                "task": "Development",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Testing",
+                "Jefferson": 65,
+                "Team": 35
+            },
+            {
+                "task": "Deployment",
+                "Jefferson": 100,
+                "Team": 0
+            },
+            {
+                "task": "Maintenance",
+                "Jefferson": 100,
+                "Team": 0
+            }
+        ],
+        "diagram": {}, 
+        "carousel": 400
+    }
+   
+}
