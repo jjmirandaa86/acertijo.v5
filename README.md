@@ -1,12 +1,42 @@
-# React + Vite
+![Logo](https://raw.githubusercontent.com/jjmirandaa86/acertijo.v5/refs/heads/main/public/assets/png/acertijo-logo-black.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Proyecto: Personal Page
 
-Currently, two official plugins are available:
+## Introduccion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to the personal page of Jefferson Miranda, a passionate Full Stack Developer with extensive experience in designing, developing, and implementing innovative technological solutions. Throughout his career, Jefferson has demonstrated strong skills in both frontend and backend development, using modern technologies to create efficient, scalable, and user-focused web applications. His approach is based on best programming practices, clean software architecture, and the use of tools such as React, Node.js, MongoDB, Express, among others. Jefferson also stands out for his ability to adapt to new challenges, solve complex problems, and collaborate effectively within agile teams. On this page, you’ll find a showcase of his projects, as well as an overview of his technical profile and the professional qualities that define him as a developer committed to excellence and continuous improvement.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**FrontEnd:** ReactJS, Vite, Mantine.
+
+## Installation
+
+Install my-project with npm
+
+```bash
+
+  cd acertijo.v5
+  npm install
+  npm run dev
+```
+
+## Authors
+
+- [@jjmirandaa86](https://www.acertijo.dev)
+
+## Screenshots
+
+Desktop
+
+![Desktop - Home](https://raw.githubusercontent.com/jjmirandaa86/acertijo.v5/refs/heads/main/public/assets/Example/Desktop-Home.webp)
+
+![Desktop - Projects](https://raw.githubusercontent.com/jjmirandaa86/acertijo.v5/refs/heads/main/public/assets/Example/Desktop-Projects.webp)
+
+Mobile
+
+![Mobile - Home](https://raw.githubusercontent.com/jjmirandaa86/acertijo.v5/refs/heads/main/public/assets/Example/Mobile-Home.webp)
+
+![Mobile - Projects](https://raw.githubusercontent.com/jjmirandaa86/acertijo.v5/refs/heads/main/public/assets/Example/Mobile-Projects.webp)
+
+![Mobile - Menu](https://raw.githubusercontent.com/jjmirandaa86/acertijo.v5/refs/heads/main/public/assets/Example/Mobile-Menu.webp)
