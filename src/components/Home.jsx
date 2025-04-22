@@ -19,6 +19,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { SiVite } from "react-icons/si";
@@ -70,10 +71,10 @@ const Home = () => {
 			ico: <FaGithub />,
 		},
 		{
-			id: 2,
-			name: "@2jmiranda",
-			link: "https://x.com/2jmiranda",
-			ico: <FaTwitter />,
+			id: 5,
+			name: "@jjmirandaa86",
+			link: "https://www.linkedin.com/in/jjmirandaa86/",
+			ico: <FaLinkedinIn />,
 		},
 		{
 			id: 3,
@@ -86,6 +87,12 @@ const Home = () => {
 			name: "@jjmirandaa",
 			link: "https://www.facebook.com/jjmirandaa",
 			ico: <FaFacebook />,
+		},
+		{
+			id: 2,
+			name: "@2jmiranda",
+			link: "https://x.com/2jmiranda",
+			ico: <FaTwitter />,
 		},
 	];
 

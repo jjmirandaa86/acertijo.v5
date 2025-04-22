@@ -14,8 +14,10 @@ import {
 	Container,
 	Modal,
 	UnstyledButton,
+	Center,
 } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
+import { useMantineColorScheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { RadarChart } from "@mantine/charts";
 import { Carousel } from "@mantine/carousel";
@@ -28,6 +30,9 @@ const ShowWork = ({ data }) => {
 	const [opened, setOpened] = useState(false);
 	const [selectedImage, setSelectedImage] = useState({});
 
+	const { colorScheme } = useMantineColorScheme();
+	const dark = colorScheme === "dark";
+
 	const items = [
 		{ title: "Works", href: "/projects" },
 		{ title: `${data.name} - ${data.year}`, href: "#" },
@@ -39,7 +44,7 @@ const ShowWork = ({ data }) => {
 			}}
 			key={index}
 		>
-			<Button variant="light" color="blue.9">
+			<Button variant={dark ? "light" : "outline"} color="blue.9">
 				{item.title}
 			</Button>
 		</Anchor>
@@ -61,21 +66,23 @@ const ShowWork = ({ data }) => {
 					{items}
 				</Breadcrumbs>
 				<Space h="xl" />
-				<Grid>
-					<Grid.Col span={{ base: 10, md: 10, lg: 10 }}>
+				<Grid style={{ padding: 5 }}>
+					<Grid.Col span={{ base: 8, md: 10, lg: 10 }}>
 						<Title order={2} size={"h1"} td={"underline"}>
 							{data.name}
 						</Title>
 					</Grid.Col>
-					<Grid.Col span={{ base: 2, md: 2, lg: 2 }}>
-						<Button
-							onClick={() => window.open(data.gitHub, "_blank")}
-							size="md"
-							color="yellow.6"
-						>
-							<FaGithub size={32} />
-							<RxOpenInNewWindow />
-						</Button>
+					<Grid.Col span={{ base: 4, md: 2, lg: 2 }}>
+						<Center>
+							<Button
+								onClick={() => window.open(data.gitHub, "_blank")}
+								size="md"
+								color="yellow.6"
+							>
+								<FaGithub size={32} />
+								<RxOpenInNewWindow />
+							</Button>
+						</Center>
 					</Grid.Col>
 				</Grid>
 				<Space h="sm" />
@@ -84,6 +91,7 @@ const ShowWork = ({ data }) => {
 				</span>
 				<Space h="xl" />
 				<Title order={3}>Platform: {data.platform}</Title>
+				<Space h="xl" />
 				<Title order={3} style={{ display: "none" }}>
 					Website: {data.website}
 				</Title>
