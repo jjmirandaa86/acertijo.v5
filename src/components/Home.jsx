@@ -157,7 +157,7 @@ const Home = () => {
 				<Space h="xl" />
 				<div>
 					<TrueFocus
-						sentence="FrontEnd BackEnd"
+						sentence="FrontEnd BackEnd Database DevOps"
 						manualMode={false}
 						blurAmount={5}
 						borderColor={"rgba(27, 139, 179, 1)"}
