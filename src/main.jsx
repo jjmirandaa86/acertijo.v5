@@ -1,8 +1,8 @@
-import { StrictMode } from "react";
+import { useState, Suspense, lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createTheme, MantineProvider, rem } from "@mantine/core";
 import "@mantine/core/styles.css";
-import App from "./App.jsx";
+import Loading from "./components/Loading/Loading.jsx";
 
 const theme = createTheme({
 	colorScheme: "dark",
@@ -83,10 +83,14 @@ const theme = createTheme({
 	},
 });
 
+const App = lazy(() => import("./App.jsx"));
+
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-			<App />
+			<Suspense fallback={<Loading />}>
+				<App />
+			</Suspense>
 		</MantineProvider>
 	</StrictMode>,
 );
