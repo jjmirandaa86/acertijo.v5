@@ -282,6 +282,29 @@ const Home = () => {
 						velocity={50}
 						//className="custom-scroll-text"
 					/>
+
+					<Center>
+						<Button
+							color="blue.9"
+							//fullWidth
+							ta={"center"}
+							mt="md"
+							size="xl"
+							radius="md"
+							onClick={() => {
+								navigate("/certificates");
+								window.scrollTo(0, 0);
+							}}
+							component="h3"
+						>
+							<ShinyText
+								text="Certificates"
+								disabled={false}
+								speed={3}
+								className="custom-class"
+							/>
+						</Button>
+					</Center>
 				</div>
 				<Space h="xl" />
 				<div>

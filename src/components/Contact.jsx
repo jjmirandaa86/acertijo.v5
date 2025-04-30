@@ -35,10 +35,10 @@ const Contact = () => {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [showError, setShowError] = useState(false);
-	const phoneNumber = "(+51) 0423 775 180",
+	const phoneNumber = "(+61) 0423 775 180",
 		email = "jjmirandaa86@gmail.com",
 		sendMessageWhatsapp =
-			"https://wa.me/+51423775180?text=Hello,+I+would+like+to+contact+you.+Thank+you";
+			"https://wa.me/+61423775180?text=Hello,+I+would+like+to+contact+you.+Thank+you";
 
 	const form = useForm({
 		initialValues: {
