@@ -90,17 +90,18 @@ const Contact = () => {
 		<>
 			<HeadPage isMobile={isMobile} />
 			<Space h="md" />
+			<Title order={1} size="h1" lh={"xs"} style={{ display: "none" }}>
+				Jefferson Miranda
+			</Title>
 			<Container size={"sm"}>
 				<Space h="md" />
 				<Grid grow gutter="xs">
 					<Grid.Col style={{ display: "none" }} span={{ base: 12, md: 6, lg: 6 }}>
 						<Card shadow="xl">
 							<Space h="md" />
-
 							<Title td={"underline"} order={2} mb="xl">
 								Contact Form
 							</Title>
-
 							{showSuccess && (
 								<Notification
 									icon={<FaCheckCircle />}
@@ -185,7 +186,7 @@ const Contact = () => {
 												variant="light"
 												style={{ padding: 0, margin: 0 }}
 											>
-												<Text>
+												<Text size="h1" component="h3">
 													<Text fw={700}>Phone Number:</Text>
 													<div style={{ padding: 4 }}>{phoneNumber.trim()}</div>
 												</Text>
@@ -209,7 +210,7 @@ const Contact = () => {
 												variant="light"
 												style={{ padding: 0, margin: 0 }}
 											>
-												<Text>
+												<Text size="h1" component="h3">
 													<Text fw={700}>Email:</Text>
 													<div style={{ padding: 4 }}>{email.trim()}</div>
 												</Text>

@@ -20,23 +20,6 @@ const HeadPage = ({ isMobile }) => {
 				<div class="wave"></div>
 			</div>
 			<Space h="xl" />
-
-			{/* <div style={{ width: 10, height: 10 }}>
-				<div
-					class="ocean"
-					style={{
-						position: "absolute",
-						transform: "rotate(180deg)",
-						margin: 800,
-						zIndex: 1,
-						width: "100%",
-						height: "100%",
-					}}
-				>
-					<div class="wave"></div>
-					<div class="wave"></div>
-				</div>
-			</div> */}
 			<Container size="sm" style={{ zIndex: 9 }}>
 				<div style={{ zIndex: 9, position: "relative" }}>
 					<BackgroundImage src={Coding} radius="lg" h={isMobile ? 300 : 350}>
