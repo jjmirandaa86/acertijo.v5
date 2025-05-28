@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineColorScheme } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 
 import { Center, Text, Space, Button, Container } from "@mantine/core";
 import FuzzyText from "./ReactBits/FuzzyText";
@@ -11,6 +12,7 @@ import Logo from "./menu/Logo";
 const NotFound = () => {
 	const navigate = useNavigate();
 	const isMobile = useMediaQuery("(max-width: 30.25em)");
+	const { t } = useTranslation();
 
 	const { colorScheme } = useMantineColorScheme();
 	const dark = colorScheme === "dark";
@@ -26,7 +28,7 @@ const NotFound = () => {
 						hoverIntensity={0.3}
 						fontSize={`clamp(${isMobile ? "150px" : "250px"}, 10vw, 10rem)`}
 					>
-						404
+						{t("app.not-found.status")}
 					</FuzzyText>
 				</Center>
 				<Space h="xl" />
@@ -50,7 +52,7 @@ const NotFound = () => {
 										hoverIntensity={0.3}
 										fontSize={"clamp(35px, 1vw, 1rem)"}
 									>
-										Page not found
+										{t("app.not-found.description")}
 									</FuzzyText>
 								</div>
 							</>
@@ -62,7 +64,7 @@ const NotFound = () => {
 								hoverIntensity={0.3}
 								fontSize={"clamp(50px, 1vw, 1rem)"}
 							>
-								Oops! Page not found
+								{t("app.not-found.description-2")}
 							</FuzzyText>
 						)}
 					</Center>
@@ -83,7 +85,7 @@ const NotFound = () => {
 						}}
 						color="blue.9"
 					>
-						Go Home
+						{t("app.not-found.go-home")}
 					</Button>
 				</Center>
 				<Space h="xl" />

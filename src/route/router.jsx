@@ -10,7 +10,6 @@ import Contact from "../components/Contact";
 import Certificates from "../components/Certificate";
 import ShowWork from "../components/Projects/ShowWork";
 import NotFound from "../components/NotFound";
-import data from "../json/dataProjects.json";
 
 export const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -21,19 +20,19 @@ export const router = createBrowserRouter(
 			<Route path="certificates" element={<Certificates />} />
 			<Route
 				path="projects/llamaremovals"
-				element={<ShowWork data={data.llamaRemovals} />}
+				element={<ShowWork project={"app.projects.list.project-1"} />}
 			/>
 			<Route
 				path="projects/learningwords"
-				element={<ShowWork data={data.learningWords} />}
+				element={<ShowWork project={"app.projects.list.project-2"} />}
 			/>
 			<Route
 				path="projects/apillamaremovals"
-				element={<ShowWork data={data.apillamaRemovals} />}
+				element={<ShowWork project={"app.projects.list.project-3"} />}
 			/>
 			<Route
 				path="projects/surveytesalia"
-				element={<ShowWork data={data.surveyTesalia} />}
+				element={<ShowWork project={"app.projects.list.project-4"} />}
 			/>
 			<Route path="*" element={<NotFound />} />
 		</Route>,

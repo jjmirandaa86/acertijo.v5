@@ -49,20 +49,22 @@ import HeadPage from "./Home/HeadPage";
 import SplitText from "./ReactBits/SplitText";
 import ShinyText from "./ReactBits/ShinyText";
 import GradientText from "./ReactBits/GradientText";
-import TrueFocus from "./ReactBits/TrueFocus";
 import RotatingText from "./ReactBits/RotatingText";
 import ScrollVelocity from "./ReactBits/ScrollVelocity";
 import DecryptedText from "./ReactBits/DecryptedText";
 
+import { useTranslation } from "react-i18next";
+import FocusText from "./Home/FocusText";
+
 const Home = () => {
 	const isMobile = useMediaQuery("(max-width: 30.25em)");
 	const navigate = useNavigate();
+	const { t } = useTranslation();
 
-	const name = "Jefferson Miranda",
-		jobTitle = "Full Stack Developer",
-		tech = "React JS / Javascript / TypeScript / Node JS",
-		intro =
-			"Jefferson is a freelance full-stack developer based in Sydney with over 12 years of experience crafting scalable and user-focused digital solutions. I thrive on turning ideas into real-world applications—handling everything from planning and design to clean, functional code. I'm especially passionate about building products that solve problems and create value through technology. Outside of work, I enjoy staying active—usually out for a run or exploring new places.";
+	const name = t("app.home.name"),
+		jobTitle = t("app.home.job-title"),
+		tech = t("app.home.tech-description"),
+		description = t("app.home.work.description");
 	const network = [
 		{
 			id: 1,
@@ -115,6 +117,7 @@ const Home = () => {
 									}}
 								>
 									<DecryptedText
+										key={name}
 										animateOn="view"
 										text={name}
 										speed={80}
@@ -128,6 +131,7 @@ const Home = () => {
 							<Title order={2} size="h2" lh={"xs"}>
 								<div style={{ textAlign: isMobile ? "center" : "left" }}>
 									<DecryptedText
+										key={jobTitle}
 										animateOn="view"
 										text={jobTitle}
 										speed={160}
@@ -141,6 +145,7 @@ const Home = () => {
 							<Title order={3} size="h5" lh={"xs"}>
 								<div style={{ textAlign: isMobile ? "center" : "left" }}>
 									<DecryptedText
+										key={tech}
 										animateOn="view"
 										text={tech}
 										speed={240}
@@ -163,23 +168,15 @@ const Home = () => {
 				</div>
 				<Space h="xl" />
 				<div>
-					<TrueFocus
-						sentence="FrontEnd BackEnd Database DevOps"
-						manualMode={false}
-						blurAmount={5}
-						borderColor={"rgba(27, 139, 179, 1)"}
-						glowColor={"rgba(27, 139, 179, 1)"}
-						animationDuration={1}
-						pauseBetweenAnimations={2}
-					/>
+					<FocusText />
 				</div>
 				<Space h="xl" />
 				<div>
 					<Title order={2} td={"underline"} ta={"left"}>
-						Work
+						{t("app.home.work.title")}
 					</Title>
 					<Space h="xs" />
-					<Text>{intro}</Text>
+					<Text>{description}</Text>
 					<Center>
 						<Button
 							color="blue.9"
@@ -195,7 +192,7 @@ const Home = () => {
 							component="h3"
 						>
 							<ShinyText
-								text="My Portfolio"
+								text={t("app.home.work.portfolio")}
 								disabled={false}
 								speed={3}
 								className="custom-class"
@@ -206,35 +203,46 @@ const Home = () => {
 				<Space h="xl" />
 				<div>
 					<Title order={2} td={"underline"}>
-						Bio
+						{t("app.home.bio.title")}
 					</Title>
 					<Space h="md" />
 					<Container size={"md"}>
 						<Grid>
-							<GridCol span={{ base: 2, md: 1, lg: 1 }}>1986</GridCol>
-							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
-								Born in Guayaquil, Ecuador.
+							<GridCol span={{ base: 2, md: 1, lg: 1 }}>
+								{t("app.home.bio.event-1.date")}
 							</GridCol>
-							<GridCol span={{ base: 2, md: 1, lg: 1 }}>2010</GridCol>
 							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
-								Completed my degree in computer systems engineering, Guayaquil /
-								Ecuador.
+								{t("app.home.bio.event-1.description")}
 							</GridCol>
-							<GridCol span={{ base: 2, md: 1, lg: 1 }}>2011</GridCol>
-							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
-								Worked in Birobid S.A., Guayaquil / Ecuador.
+							<GridCol span={{ base: 2, md: 1, lg: 1 }}>
+								{t("app.home.bio.event-2.date")}
 							</GridCol>
-							<GridCol span={{ base: 2, md: 1, lg: 1 }}>2012</GridCol>
 							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
-								Worked in SYL Trading Company, Guayaquil / Ecuador.
+								{t("app.home.bio.event-2.description")}
 							</GridCol>
-							<GridCol span={{ base: 2, md: 1, lg: 1 }}>2015</GridCol>
-							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
-								Worked in Tesalia CBC, Guayaquil / Ecuador.
+							<GridCol span={{ base: 2, md: 1, lg: 1 }}>
+								{t("app.home.bio.event-3.date")}
 							</GridCol>
-							<GridCol span={{ base: 2, md: 1, lg: 1 }}>2024</GridCol>
 							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
-								Studying a diploma in FrontEnd-Backend, Sydney, Australia.
+								{t("app.home.bio.event-3.description")}
+							</GridCol>
+							<GridCol span={{ base: 2, md: 1, lg: 1 }}>
+								{t("app.home.bio.event-4.date")}
+							</GridCol>
+							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
+								{t("app.home.bio.event-4.description")}
+							</GridCol>
+							<GridCol span={{ base: 2, md: 1, lg: 1 }}>
+								{t("app.home.bio.event-5.date")}
+							</GridCol>
+							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
+								{t("app.home.bio.event-5.description")}
+							</GridCol>
+							<GridCol span={{ base: 2, md: 1, lg: 1 }}>
+								{t("app.home.bio.event-6.date")}
+							</GridCol>
+							<GridCol span={{ base: 10, md: 11, lg: 11 }}>
+								{t("app.home.bio.event-6.description")}
 							</GridCol>
 						</Grid>
 					</Container>
@@ -242,7 +250,7 @@ const Home = () => {
 				<Space h="xl" />
 				<div style={{ fontSize: "10px" }}>
 					<Title order={2} td={"underline"}>
-						Tech
+						{t("app.home.tech.title")}
 					</Title>
 					<Space h="md" />
 					<ScrollVelocity
@@ -298,7 +306,7 @@ const Home = () => {
 							component="h3"
 						>
 							<ShinyText
-								text="Certificates"
+								text={t("app.home.tech.certificate")}
 								disabled={false}
 								speed={3}
 								className="custom-class"
@@ -309,25 +317,22 @@ const Home = () => {
 				<Space h="xl" />
 				<div>
 					<Title order={2} td={"underline"}>
-						I ♥
+						{t("app.home.love.title")}
 					</Title>
 					<Space h="md" />
 					<Container size={"md"}>
-						<Text>
-							swimming 🏊‍♂️, running 🏃‍♂️, trekking 🧗‍♂️, coding 👨‍💻, coding 👨‍💻 and more
-							coding 👨‍💻.
-						</Text>
+						<Text>{t("app.home.love.description")}</Text>
 					</Container>
 				</div>
 				<Space h="xl" />
 				<div>
 					<Title order={2} td={"underline"}>
-						On the web
+						{t("app.home.social-media.title")}
 					</Title>
 					<Space h="md" />
 					<div style={{ paddingLeft: 30 }}>
-						{network.map((el) => (
-							<div>
+						{network.map((el, index) => (
+							<div key={index}>
 								<Button
 									style={{ margin: 4 }}
 									component="h3"

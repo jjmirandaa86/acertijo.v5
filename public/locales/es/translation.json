@@ -1,0 +1,562 @@
+{
+    "app": {
+        "general":{
+            "logo": {
+                "alt": "Acertijo logo, marca personal"
+            },
+            "mode": {
+                "title": "Tema color"
+            },
+            "language": {
+                "title": "Currículum"
+            },
+            "menu": {
+                "slice":{
+                    "title": "Menú"
+                },
+                "main": {
+                    "label": "Principal"
+                },
+                "projects": {
+                    "label": "Proyectos"
+                },
+                "contact": {
+                    "label": "Contacto"
+                },
+                "gibhub": {
+                    "label": "Github"
+                },
+                "cv": {
+                    "label": "CV"
+                }
+            }
+        },
+        "home": {
+            "head-title": "¡Hola, Soy desarrollador Full Stack con base en Sydney!",
+            "name": "Jefferson Miranda",
+            "job-title": "Desarrollador Full Stack", 
+            "tech-description": "React JS / Javascript / TypeScript / Node JS",
+            "type-services": "FrontEnd BackEnd Database DevOps",
+            "work": {
+                "title": "Resumen",
+                "description": "Jefferson es un desarrollador freelance full-stack con sede en Sydney con más de 12 años de experiencia en la elaboración de soluciones digitales escalables y centradas en el usuario. Me encanta convertir ideas en aplicaciones reales, desde la planificación y el diseño hasta el código limpio y funcional. Me apasiona especialmente crear productos que resuelvan problemas y creen valor a través de la tecnología. Fuera del trabajo, me gusta mantenerme activo, por lo general salir a correr o explorar nuevos lugares.",
+                "portfolio": "Portafolio"
+            },
+            "bio": {
+                "title": "Biografía",
+                "event-1": {
+                    "date": "1986",
+                    "description": "Nací en Guayaquil 🇪🇨."
+                },
+                "event-2": {
+                    "date": "2010",
+                    "description": "Completé mis estudios en ingeniería de sistemas informáticos en Guayaquil 🇪🇨."
+                },
+                "event-3": {
+                    "date": "2011",
+                    "description": "Trabajé en Birobid S.A., Guayaquil 🇪🇨."
+                },
+                "event-4": {
+                    "date": "2012",
+                    "description": "Trabajé en SYL Trading Company, Guayaquil 🇪🇨."
+                },
+                "event-5": {
+                    "date": "2015",
+                    "description": "Trabajé en Tesalia CBC, Guayaquil 🇪🇨."
+                },
+                "event-6": {
+                    "date": "2024",
+                    "description": "Estudiando un Diploma en FrontEnd-Backend, Sydney 🇦🇺."
+                }
+            },
+            "tech": {
+                "title": "Tecnologías",
+                "certificate": "Certificados"
+            },
+            "love": {
+                "title": "Yo ♥",
+                "description": "Natación 🏊‍♂️, correr 🏃‍♂️, senderismo 🧗‍♂️, codificación 👨‍💻, codificación 👨‍💻 y más codificación 👨‍💻."
+            },
+            "social-media": {
+                "title": "Sobre la web"
+            }
+        },
+        "projects":{
+            "title": "Trabajos",
+            "title-2": "Trabajos pasados",
+            "more-info": "Más info.",
+            "website": "Sitio web",
+            "platform": "Plataforma",
+            "stack": "Herramienta",
+            "server": "Servidor",
+            "contribution": "Contribución",
+            "screenshot": "Capturas de pantalla",
+            "team": "Equipo",
+            "list": {
+                "project-1": {
+                    "id": 1,
+                    "year": 2025,
+                    "name": "Llama Removals",
+                    "description": "La empresa ofrece servicios completos de mudanzas.",
+                    "descriptionLonger": "Mudanzas Llama es una empresa de mudanzas con sede en Sídney especializada en ofrecer servicios de traslado fiables, rápidos y asequibles, tanto para hogares como para oficinas. El sitio web permite a los usuarios informarse sobre los distintos servicios disponibles, solicitar presupuestos personalizados a través de formularios, explorar áreas de cobertura como mudanzas locales e interestatales. Adicional poder contactar fácilmente a través de llamadas directas o formularios web. \n\n El diseño pretende dar confianza y facilitar la toma de decisiones rápidas a los clientes que buscan un servicio profesional de mudanzas.",
+                    "descriptionTech": "El sitio se desarrolló utilizando tecnologías modernas como React, Vite, React Router DOM, Axios, Redux, HTML, CSS y JavaScript. Estas herramientas nos permitieron crear una SPA (Single Page Application) rápida y eficiente, con rutas dinámicas, gestión de estados centralizada y llamadas HTTP optimizadas. Desarrollé la web de Mudanzas Llama de forma independiente, implementando un diseño totalmente responsive optimizado para escritorio, tablet y dispositivos móviles. Utilicé React con Vite para garantizar una carga rápida, junto con Redux y Axios para manejar los datos y las solicitudes de API de manera eficiente. \n\n Nuestra API se integra con Google Maps Platform para proporcionar servicios de localización precisa en tiempo real, mejorando la precisión de su servicio de mudanzas. Cuando un cliente solicita un presupuesto, el sistema: \n\n - Sugiere automáticamente direcciones de recogida y destino a través de Google Maps autocompletar, evitando errores de entrada. \n\n - Valida las ubicaciones para garantizar la accesibilidad (por ejemplo, 123 Main Street, Sydney, NSW → coordenadas exactas).\n\n - Calcula rutas de mudanza optimizadas teniendo en cuenta el tráfico y los peajes. \n\n Mi objetivo es crear una experiencia de usuario, clara y fluida, alineada con los estándares actuales de desarrollo web.",
+                    "website": "llamaremovals.com.au",
+                    "websiteLong": "https://llamaremovals.com.au",
+                    "platform": "Sitio web (FrontEnd)",
+                    "stack": "React JS, Vite, Mantine. \nReact-Router-DOM, Redux, Axios",
+                    "server": "Digital Ocean - Droplets (Servidor dedicado).\nLinux Ubuntu distribución.",
+                    "gitHub": "https://github.com/jjmirandaa86/llama-removals",
+                    "images": [
+                        {
+                            "id": 1,
+                            "link": "/assets/webp/llamaremovals/Mobile.webp",
+                            "alt": "Sitio web - Versión Móvil"
+                        },
+                        {
+                            "id": 2,
+                            "link": "/assets/webp/llamaremovals/Tablet.webp",
+                            "alt": "Sitio web - Versión Tablet"
+                        },
+                        {
+                            "id": 3,
+                            "link": "/assets/webp/llamaremovals/Desktop.webp",
+                            "alt": "Sitio web - Versión Escritorio"
+                        }
+                    ],
+                    "dataChart": [
+                        {
+                            "task": "Requerimientos",
+                            "Jefferson": 60,
+                            "Team": 40
+                        },
+                        {
+                            "task": "Análisis",
+                            "Jefferson": 70,
+                            "Team": 30
+                        },
+                        {
+                            "task": "Diseño",
+                            "Jefferson": 35,
+                            "Team": 65
+                        },
+                        {
+                            "task": "Desarrollo",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Pruebas",
+                            "Jefferson": 85,
+                            "Team": 15
+                        },
+                        {
+                            "task": "Despliegue",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Mantenimiento",
+                            "Jefferson": 100,
+                            "Team": 0
+                        }
+                    ],
+                    "diagram": {
+                        "url": "/assets/webp/llamaremovals/Diagram.webp",
+                        "alt": "Diagrama de procesos - Llama Removals"
+                    },
+                    "carousel": 200
+                },
+                "project-2": {
+                    "id": 2,
+                    "year": 2024,
+                    "name": "Learning words",
+                    "description": "Lista de palabras en inglés, Aprende exactamente lo que quieres aprender.",
+                    "descriptionLonger": "Learning words es una innovadora plataforma web y móvil diseñada para que el aprendizaje de vocabulario en inglés sea interactivo y personalizado. La aplicación permite a los usuarios explorar, añadir y organizar palabras en categorías o favoritos, a la vez que realizan un seguimiento de su progreso a través de un intuitivo gráfico de porcentaje de aprendizaje. Con un diseño responsivo optimizado para dispositivos móviles, tabletas y ordenadores de sobremesa, Learning words ofrece una experiencia fluida y accesible, perfecta para los estudiantes que buscan ampliar sus conocimientos lingüísticos de una forma dinámica y visual.",
+                    "descriptionTech": "La plataforma se creó utilizando tecnologías web modernas, como React JS, Bootstrap, React Router DOM, Redux y Axios, junto con herramientas básicas como HTML, CSS y JavaScript. Esta pila de tecnología permitió el desarrollo de una SPA (Single Page Application) de alto rendimiento con enrutamiento dinámico, gestión de estado centralizada e interacciones API optimizadas. Como único desarrollador, construí Learning Words con un diseño totalmente responsivo, garantizando una usabilidad sin fisuras en dispositivos de escritorio, tabletas y móviles. Aprovechando la arquitectura basada en componentes de React y el marco de estilo con Bootstrap, di prioridad a una UI/UX limpia e intuitiva, manteniendo tiempos de carga rápidos y un manejo de datos eficiente (a través de Redux y Axios). El resultado es una aplicación fácil de usar que se alinea con los estándares de desarrollo modernos, ofreciendo a los estudiantes una forma estructurada de seguir el progreso del vocabulario a través de funciones interactivas como listas de palabras categorizadas, favoritos y análisis de aprendizaje visual.",
+                    "website": "learningwords-pi.vercel.app",
+                    "websiteLong": "https://learningwords-pi.vercel.app",
+                    "platform": "Sitio web (FrontEnd)",
+                    "stack": "React JS, React-Router-DOM, Redux.  \n Bootstrap, Axios",
+                    "server": "Vercel Server",
+                    "gitHub": "https://github.com/jjmirandaa86/learningwords",
+                    "images": [
+                        {
+                            "id": 1,
+                            "link": "/assets/webp/learningwords/Mobile-Loading.webp",
+                            "alt": "Sitio web - Versión Móvil - Carga inicial"
+                        },
+                        {
+                            "id": 2,
+                            "link": "/assets/webp/learningwords/Mobile-Login.webp",
+                            "alt": "Sitio web - Versión Móvil - Carga inicial"
+                        },
+                        {
+                            "id": 3,
+                            "link": "/assets/webp/learningwords/Mobile-Dashboard.webp",
+                            "alt": "Sitio web - Versión Móvil - Tablero"
+                        },
+                        {
+                            "id": 4,
+                            "link": "/assets/webp/learningwords/Mobile-Words.webp",
+                            "alt": "Sitio web - Versión Móvil - Words"
+                        }
+                    ],
+                    "dataChart": [
+                        {
+                            "task": "Requerimientos",
+                            "Jefferson": 80,
+                            "Team": 20
+                        },
+                        {
+                            "task": "Análisis",
+                            "Jefferson": 70,
+                            "Team": 30
+                        },
+                        {
+                            "task": "Diseño",
+                            "Jefferson": 70,
+                            "Team": 30
+                        },
+                        {
+                            "task": "Desarrollo",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Pruebas",
+                            "Jefferson": 85,
+                            "Team": 15
+                        },
+                        {
+                            "task": "Despliegue",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Mantenimiento",
+                            "Jefferson": 100,
+                            "Team": 0
+                        }
+                    ],
+                    "diagram": {},
+                    "carousel": 300
+                },
+                "project-3": {
+                    "id": 3,
+                    "year": 2025,
+                    "name": "Api Llama Removals",
+                    "description": "Servicio API REST que gestiona las solicitudes de aplicaciones frontales para Mudanzas Llama.",
+                    "descriptionLonger": "La API de Mudanzas Llama es la columna vertebral de nuestra plataforma de cara al cliente, permitiendo interacciones seguras y eficientes entre nuestro sitio web, base de datos y servicios externos. \n\n Diseñado para soportar varias solicitudes, esta API RESTful maneja: \n\n - Solicitudes de presupuesto (a través de envíos POST). \n\n - Datos de servicio/área de cobertura (puntos finales GET). \n\n - Comunicaciones con los clientes (formularios de contacto, sistemas de devolución de llamada). \n\n - Operaciones administrativas (gestión de reservas, seguimiento de recursos). \n\n Construida con MySQL para la fiabilidad transaccional y autenticación JWT para la seguridad, la API garantiza operaciones rápidas y auditables, críticas para la logística en movimiento.",
+                    "descriptionTech":  "La API REST de Llama Removals implementa métodos HTTP estándar (GET, POST, PUT/PATCH, DELETE) para impulsar todas las interacciones de la plataforma. Basada en una base de datos MySQL para un procesamiento de transacciones fiable, la API utiliza autenticación por token de portador para proteger los endpoints, con limitación a las operaciones públicas (abierto). Todas las respuestas siguen el formato JSON con códigos de estado RESTful (200 para solicitudes exitosas, 401 para acceso no autorizado, etc.), lo que garantiza una integración predecible para clientes web y móviles, manteniendo la velocidad y la fiabilidad propias de los servicios de mudanzas de Llama Removals.",
+                    "website": "api.llamaremovals.com.au",
+                    "websiteLong": "https://api.llamaremovals.com.au",
+                    "platform": "Api RESTful (BackEnd)",
+                    "stack": "NodeJS, MySql, JWT,  \nPatron MVC: \n → 1. Routes  \n→ 2. Middlewares  \n→ 3. Controller  \n→ 4. Service  \n→ 5. Model  \n→ 6. DB",
+                    "server":  "Digital Ocean - Droplets (Dedicated server). \nLinux Ubuntu distribución (PM2)",
+                    "gitHub": "https://github.com/jjmirandaa86/llama-removals-api",
+                    "images": [
+                        {
+                            "id": 1,
+                            "link": "/assets/webp/apillamaremovals/getAll.webp",
+                            "alt": "BackEnd - Lista todas los usuarios"
+                        },
+                        {
+                            "id": 2,
+                            "link": "/assets/webp/apillamaremovals/getId.webp",
+                            "alt": "BackEnd - Obtine los usuario por ID"
+                        },
+                        {
+                            "id": 3,
+                            "link": "/assets/webp/apillamaremovals/post.webp",
+                            "alt": "BackEnd - Envío datos por post"
+                        }
+                    ],
+                    "dataChart": [
+                        {
+                            "task": "Requerimientos",
+                            "Jefferson": 40,
+                            "Team": 60
+                        },
+                        {
+                            "task": "Análisis",
+                            "Jefferson": 90,
+                            "Team": 10
+                        },
+                        {
+                            "task": "Diseño",
+                            "Jefferson": 90,
+                            "Team": 10
+                        },
+                        {
+                            "task": "Desarrollo",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Pruebas",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Despliegue",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Mantenimiento",
+                            "Jefferson": 100,
+                            "Team": 0
+                        }
+                    ],
+                    "diagram": {
+                        "url": "/assets/webp/llamaremovals/Diagram.webp",
+                        "alt": "Diagrama de procesos - Llama Removals"
+                    }, 
+                    "carousel": 400
+                },
+                "project-4": {
+                    "id": 4,
+                    "year": 2021,
+                    "name": "Encuesta",
+                    "description": "Aplicación para gestionar los dispositivos móviles de ventas, alineando el inventario informático con las necesidades comerciales.",
+                    "descriptionLonger":  "La aplicación está diseñada para agilizar la gestión y disponibilidad de los dispositivos móviles utilizados por los ejecutivos de venta mediante encuestas dirigidas a gerentes comerciales responsables . TI predefine los valores de inventario, especificando la cantidad y el tipo de dispositivos disponibles. Estos datos se cruzan con las necesidades del equipo comercial, garantizando una alineación eficiente entre los recursos existentes y las demandas operativas. \n La herramienta proporciona visibilidad en tiempo real del stock de dispositivos, garantizando que los equipos comerciales disponen de las herramientas necesarias para captar pedidos de forma eficiente. Además, optimiza el control del inventario, evitando faltas o excedentes, y ofrece un marco claro para la toma de decisiones estratégicas en la distribución de dispositivos.",
+                    "descriptionTech":  "La aplicación se construyó con React JS en el frontend para crear una interfaz dinámica y con capacidad de respuesta, mientras que en el backend se utilizó PHP para gestionar la lógica empresarial y la conectividad con la base de datos. \n Los datos de la encuesta se almacenan y estructuran en formato JSON, lo que garantiza una manipulación fluida de los datos y una integración perfecta entre capas. Esta pila tecnológica permite un flujo de datos ágil, transacciones seguras y una fácil escalabilidad del sistema.",
+                    "website": "",
+                    "websiteLong": "",
+                    "platform": "FrontEnd / BackEnd",
+                    "stack": "React JS \n PHP",
+                    "server": "Centro de datos centralizado Tesalia (Servidor dedicado).",
+                    "gitHub": "https://github.com/jjmirandaa86/ttsc_encuesta",
+                    "images": [
+                        {
+                            "id": 1,
+                            "link": "/assets/webp/surveyTesalia/EncuestaFuncionario.webp",
+                            "alt": "FrontEnd - Datos personales"
+                        },
+                        {
+                            "id": 2,
+                            "link": "/assets/webp/surveyTesalia/EncuestaDatos.webp",
+                            "alt": "FrontEnd - Datos de localización Móvil"
+                        },
+                        {
+                            "id": 3,
+                            "link": "/assets/webp/surveyTesalia/EncuestaEnvio.webp",
+                            "alt": "FrontEnd - Envió de datos"
+                        }
+                    ],
+                    "dataChart": [
+                        {
+                            "task": "Requerimientos",
+                            "Jefferson": 70,
+                            "Team": 30
+                        },
+                        {
+                            "task": "Análisis",
+                            "Jefferson": 60,
+                            "Team": 40
+                        },
+                        {
+                            "task": "Diseño",
+                            "Jefferson": 90,
+                            "Team": 10
+                        },
+                        {
+                            "task": "Desarrollo",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Pruebas",
+                            "Jefferson": 65,
+                            "Team": 35
+                        },
+                        {
+                            "task": "Despliegue",
+                            "Jefferson": 100,
+                            "Team": 0
+                        },
+                        {
+                            "task": "Mantenimiento",
+                            "Jefferson": 100,
+                            "Team": 0
+                        }
+                    ],
+                    "diagram": {}, 
+                    "carousel": 400
+                }
+            }
+        },
+        "contact": {
+            "title": "Formulario de contacto",
+            "phone": {
+                "title": "Número de teléfono:",
+                "description": "(+61) 0423 775 180"
+            },
+            "email": {
+                "title": "Correo electronico:",
+                "description": "jjmirandaa86@gmail.com"
+            },
+            "whats-app": {
+                "title": "WhatsApp:",
+                "description": "https://wa.me/+61423775180?text=Hello,+I+would+like+to+contact+you.+Thank+you"
+            },
+            "message-success": "Su mensaje ha sido enviado.",
+            "message-error": "Hemos tenido un problema. Por favor, inténtelo una vez más."
+        },
+        "certificate": {
+            "title": "Certificados",
+            "status-in-progress": "En progreso",
+            "list": {
+                "certificate-1": {
+                    "id": 1,
+                    "type": "Certificado",
+                    "name": "Desarrollo de aplicaciones móviles",
+                    "year": 2016,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "Espol (Cisco)",
+                    "description": "Diseño, desarrollo, ciclo de vida de aplicaciones nativas Android.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-Android.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 5
+                },
+                "certificate-2": {
+                    "id": 2,
+                    "type": "Grado",
+                    "name": "Bachiller",
+                    "year": 2003,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "Leonidas Garcia",
+                    "description": "Bachiller en Ciencias Matemáticas y Físicas.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-Bachiller-Fisico-Matematico.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 5
+                },
+                "certificate-3": {
+                    "id": 3,
+                    "type": "Certificado",
+                    "name": "Inteligencia de negocios",
+                    "year": 2015,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "Capacites (Tecnologíco Espiritu Santo)",
+                    "description": "Análisis y presentación de datos para mejorar la toma de decisiones empresariales.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-BusinessInteligent.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 4
+                },
+                "certificate-4": {
+                    "id": 4,
+                    "type": "Certificado",
+                    "name": "Planificación de la demanda",
+                    "year": 2016,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "CBC Universidad (Tesalia)",
+                    "description": "Analice, anticipe y planifique la demanda futura de sus productos o servicios.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-DemandPlaning.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 3
+                },
+                "certificate-5": {
+                    "id": 5,
+                    "type": "Certificado",
+                    "name": "Directorio Activo",
+                    "year": 2016,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "Formación en TI",
+                    "description": "Instalación y configuración de directivas de Active Directory - Windows Server 2016.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-ADWS2016.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 4
+                },
+                "certificate-6": {
+                    "id": 6,
+                    "type": "Certificado",
+                    "name": "ITIL Fundamentos",
+                    "year": 2018,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "Genial Ecuador",
+                    "description": "Biblioteca de Infraestructuras de Tecnologías de la Información.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-ItilsFundaments.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 4
+                },
+                "certificate-7": {
+                    "id": 7,
+                    "type": "Certificado",
+                    "name": "Tester",
+                    "year": 2018,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "Fundación Carlos Slim",
+                    "description": "Hacer prácticas en tester.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-Tester.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 4
+                },
+                "certificate-8": {
+                    "id": 8,
+                    "type": "Certificado",
+                    "name": "Computación en nube",
+                    "year": 2024,
+                    "country": "Sydney, 🇦🇺",
+                    "where": "Tafe NSW",
+                    "description": "Computación en nube.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-CloudComputing-TafeNSW.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 5
+                },
+                "certificate-9": {
+                    "id": 9,
+                    "type": "Certificado",
+                    "name": "Inglés",
+                    "year": 2024,
+                    "country": "Sydney, 🇦🇺",
+                    "where": "ILSC",
+                    "description": "Obtuve nivel de ingles intermedio plus en ILSC Language Schools.",
+                    "linkImage": "/assets/pdf/certificates/Diploma-ILSC.pdf",
+                    "icoImage": "null",
+                    "visible": true,
+                    "stars": 5
+                },
+                "certificate-10": {
+                    "id": 10,
+                    "type": "Diploma",
+                    "name": "FrondEnd/BackEnd",
+                    "year": 2025,
+                    "country": "Sydney, 🇦🇺",
+                    "where": "Laneway",
+                    "description": "Elevar los conocimientos lingüísticos y, al mismo tiempo, conocer las nuevas tecnologías modernas.",
+                    "linkImage": "/assets/pdf/certificates/Diploma-ILSC.pdf",
+                    "icoImage": "",
+                    "visible": true,
+                    "stars": 5
+                },
+                "certificate-11": {
+                    "id": 11,
+                    "type": "Grado",
+                    "name": "Ingeniero en sistemas computacionales",
+                    "year": 2010,
+                    "country": "Guayaquil, 🇪🇨",
+                    "where": "Universidad de Guayaquil",
+                    "description": "Titulación en ingeniería de sistemas informáticos.",
+                    "linkImage": "/assets/pdf/certificates/Certificate-SENESCYT.pdf",
+                    "icoImage": "",
+                    "visible": true,
+                    "stars": 5
+                }
+            }
+        },
+        "not-found": {
+            "status": 404,
+            "description": "Página no encontrada",
+            "description-2": "Oops! Página no encontrada",
+            "go-home": "Ir al inicio"
+        }
+    }
+}

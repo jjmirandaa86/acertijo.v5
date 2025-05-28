@@ -17,6 +17,7 @@ import {
 	Center,
 } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useMantineColorScheme } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { RadarChart } from "@mantine/charts";
@@ -24,7 +25,7 @@ import { Carousel } from "@mantine/carousel";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { FaGithub } from "react-icons/fa";
 
-const ShowWork = ({ data }) => {
+const ShowWork = ({ project }) => {
 	const isMobile = useMediaQuery("(max-width: 30.25em)");
 	const navigate = useNavigate();
 	const [opened, setOpened] = useState(false);
@@ -33,9 +34,29 @@ const ShowWork = ({ data }) => {
 	const { colorScheme } = useMantineColorScheme();
 	const dark = colorScheme === "dark";
 
+	const { t } = useTranslation();
+	const {
+		id,
+		year,
+		name,
+		description,
+		descriptionLonger,
+		descriptionTech,
+		website,
+		websiteLong,
+		platform,
+		stack,
+		server,
+		gitHub,
+		images,
+		dataChart,
+		diagram,
+		carousel,
+	} = t(project);
+
 	const items = [
-		{ title: "Works", href: "/projects" },
-		{ title: `${data.name} - ${data.year}`, href: "#" },
+		{ title: t("app.projects.title"), href: "/projects" },
+		{ title: `${name} - ${year}`, href: "#" },
 	].map((item, index) => (
 		<Anchor
 			onClick={() => {
@@ -56,9 +77,9 @@ const ShowWork = ({ data }) => {
 	};
 
 	return (
-		<div>
+		<div key={id}>
 			<Title order={1} style={{ display: "none" }}>
-				Jefferson Miranda
+				{t("app.home.name")}
 			</Title>
 			<Container size={"sm"}>
 				<Space h="xl" />
@@ -69,13 +90,13 @@ const ShowWork = ({ data }) => {
 				<Grid style={{ padding: 5 }}>
 					<Grid.Col span={{ base: 8, md: 10, lg: 10 }}>
 						<Title order={2} size={"h1"} td={"underline"}>
-							{data.name}
+							{name}
 						</Title>
 					</Grid.Col>
 					<Grid.Col span={{ base: 4, md: 2, lg: 2 }}>
 						<Center>
 							<Button
-								onClick={() => window.open(data.gitHub, "_blank")}
+								onClick={() => window.open(gitHub, "_blank")}
 								size="md"
 								color="yellow.6"
 							>
@@ -87,19 +108,21 @@ const ShowWork = ({ data }) => {
 				</Grid>
 				<Space h="sm" />
 				<span style={{ whiteSpace: "pre-line" }}>
-					<Text>{data.description}</Text>
+					<Text>{descriptionLonger}</Text>
 				</span>
 				<Space h="xl" />
-				<Title order={3}>Platform: {data.platform}</Title>
+				<Title order={3}>
+					{t("app.projects.platform")}: {platform}
+				</Title>
 				<Space h="xl" />
 				<Title order={3} style={{ display: "none" }}>
-					Website: {data.website}
+					{t("app.projects.website")}: {website}
 				</Title>
 				<Title order={3} style={{ display: "none" }}>
-					Stack: {data.stack}
+					{t("app.projects.stack")}: {stack}
 				</Title>
 				<Title order={3} style={{ display: "none" }}>
-					Server: {data.Server}
+					{t("app.projects.server")}: {server}
 				</Title>
 				<div>
 					<Container size="xs">
@@ -107,29 +130,29 @@ const ShowWork = ({ data }) => {
 							<Grid.Col span={{ base: 4, md: 3, lg: 3 }}>
 								<Mark color="blue.9" style={{ padding: 5 }}>
 									<Text c={"white"} fw={700} component="span">
-										Platform:
+										{t("app.projects.platform")}:
 									</Text>
 								</Mark>
 							</Grid.Col>
-							<Grid.Col span={{ base: 8, md: 9, lg: 9 }}>{data.platform}</Grid.Col>
+							<Grid.Col span={{ base: 8, md: 9, lg: 9 }}>{platform}</Grid.Col>
 							<Grid.Col span={{ base: 4, md: 3, lg: 3 }}>
 								<Mark color="blue.9" style={{ padding: 5 }}>
 									<Text c={"white"} fw={700} component="span">
-										Website:
+										{t("app.projects.website")}:
 									</Text>
 								</Mark>
 							</Grid.Col>
 							<Grid.Col span={{ base: 8, md: 9, lg: 9 }}>
-								{data.website === "" ? (
+								{website === "" ? (
 									"-"
 								) : (
 									<a>
 										<UnstyledButton
-											onClick={() => window.open(data.websiteLong, "_blank")}
+											onClick={() => window.open(websiteLong, "_blank")}
 											size="md"
 											color="yellow.6"
 										>
-											{data.website} <RxOpenInNewWindow />
+											{website} <RxOpenInNewWindow />
 										</UnstyledButton>
 									</a>
 								)}
@@ -137,22 +160,22 @@ const ShowWork = ({ data }) => {
 							<Grid.Col span={{ base: 4, md: 3, lg: 3 }}>
 								<Mark color="blue.9" style={{ padding: 5 }}>
 									<Text c={"white"} fw={700} component="span">
-										Stack:
+										{t("app.projects.stack")}:
 									</Text>
 								</Mark>
 							</Grid.Col>
 							<Grid.Col span={{ base: 8, md: 9, lg: 9 }}>
-								<span style={{ whiteSpace: "pre-line" }}>{data.stack}</span>
+								<span style={{ whiteSpace: "pre-line" }}>{stack}</span>
 							</Grid.Col>
 							<Grid.Col span={{ base: 4, md: 3, lg: 3 }}>
 								<Mark color="blue.9" style={{ padding: 5 }}>
 									<Text c={"white"} fw={700} component="span">
-										Server:
+										{t("app.projects.server")}:
 									</Text>
 								</Mark>
 							</Grid.Col>
 							<Grid.Col span={{ base: 8, md: 9, lg: 9 }}>
-								<span style={{ whiteSpace: "pre-line" }}>{data.server}</span>
+								<span style={{ whiteSpace: "pre-line" }}>{server}</span>
 							</Grid.Col>
 						</Grid>
 					</Container>
@@ -160,11 +183,11 @@ const ShowWork = ({ data }) => {
 				<Space h="xl" />
 				<div>
 					<Title order={3} td={"underline"}>
-						Contribution
+						{t("app.projects.contribution")}
 					</Title>
 					<RadarChart
 						h={400}
-						data={data.dataChart}
+						data={dataChart}
 						dataKey="task"
 						withPolarGrid={true}
 						withPolarAngleAxis={true}
@@ -181,7 +204,7 @@ const ShowWork = ({ data }) => {
 								opacity: 0.4,
 							},
 							{
-								name: "Team",
+								name: t("app.projects.team"),
 								color: "yellow.6",
 								opacity: 0.3,
 							},
@@ -190,16 +213,14 @@ const ShowWork = ({ data }) => {
 				</div>
 				<Space h="xl" />
 				<span style={{ whiteSpace: "pre-line" }}>
-					<Text>{data.descriptionTech}</Text>
+					<Text>{descriptionTech}</Text>
 				</span>
 				<Space h="xl" />
-				{data.diagram && (
-					<Image src={data.diagram.url} alt={data.diagram.alt} radius="sm" />
-				)}
+				{diagram && <Image src={diagram.url} alt={diagram.alt} radius="sm" />}
 				<Space h="xl" />
 				<div>
 					<Title order={3} td={"underline"}>
-						Screenshot
+						{t("app.projects.screenshot")}
 					</Title>
 					<Space h="xs" />
 					<Carousel
@@ -211,11 +232,11 @@ const ShowWork = ({ data }) => {
 						dragFree
 						withIndicators
 					>
-						{data.images.map((image) => (
-							<Carousel.Slide>
+						{images.map((image, index) => (
+							<Carousel.Slide key={index}>
 								<Image
 									onDoubleClick={() => handleDoubleClick(image)}
-									w={data.carousel}
+									w={carousel}
 									src={image.link}
 									key={image.id}
 									alt={image.alt}

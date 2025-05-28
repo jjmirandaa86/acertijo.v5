@@ -10,6 +10,7 @@ import {
 	Container,
 } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
+import ChooseFileCv from "../Cv/ChooseFileCv";
 
 const MenuOptionsMobile = ({ list, toggle, type }) => {
 	//type => I Internal - E External
@@ -23,8 +24,8 @@ const MenuOptionsMobile = ({ list, toggle, type }) => {
 		<>
 			{type === "I" && (
 				<Container>
-					{listMenuOptionsMobile.map((el) => (
-						<>
+					{listMenuOptionsMobile.map((el, index) => (
+						<div key={index}>
 							<UnstyledButton
 								style={{ paddingLeft: 30, paddingBottom: 10 }}
 								onClick={() => {
@@ -36,7 +37,7 @@ const MenuOptionsMobile = ({ list, toggle, type }) => {
 								{el.ico} {el.name}
 							</UnstyledButton>
 							<Space h="xs" />
-						</>
+						</div>
 					))}
 				</Container>
 			)}
@@ -46,8 +47,9 @@ const MenuOptionsMobile = ({ list, toggle, type }) => {
 				{type === "E" && (
 					<Container>
 						<Grid grow gutter="sm">
-							{listMenuOptionsMobile.map((el) => (
-								<Grid.Col span={12}>
+							<ChooseFileCv mobile={true} />
+							{listMenuOptionsMobile.map((el, index) => (
+								<Grid.Col span={12} key={index}>
 									<Button
 										fullWidth
 										variant="filled"

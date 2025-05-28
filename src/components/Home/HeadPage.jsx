@@ -10,14 +10,17 @@ import {
 	Space,
 } from "@mantine/core";
 import BlurText from "../ReactBits/BlurText";
+import { useTranslation } from "react-i18next";
 
 const HeadPage = ({ isMobile }) => {
-	const title = "Hello, I am full stack developer based in Sydney!";
+	const { t } = useTranslation();
+
+	const title = t("app.home.head-title");
 	return (
 		<>
-			<div class="ocean">
-				<div class="wave"></div>
-				<div class="wave"></div>
+			<div className="ocean">
+				<div className="wave"></div>
+				<div className="wave"></div>
 			</div>
 			<Space h="xl" />
 			<Container size="sm" style={{ zIndex: 9 }}>

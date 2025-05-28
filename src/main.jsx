@@ -1,8 +1,9 @@
-import { useState, Suspense, lazy, StrictMode } from "react";
+import { Suspense, lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createTheme, MantineProvider, rem } from "@mantine/core";
+import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import Loading from "./components/Loading/Loading.jsx";
+import "./i18n/i18n.tsx";
 
 const theme = createTheme({
 	colorScheme: "dark",

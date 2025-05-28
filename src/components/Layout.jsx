@@ -12,6 +12,7 @@ import {
 	Text,
 	Box,
 } from "@mantine/core";
+import { useTranslation } from "react-i18next";
 import { useDisclosure } from "@mantine/hooks";
 import { useNavigate } from "react-router-dom";
 
@@ -34,6 +35,7 @@ import { SiReaddotcv } from "react-icons/si";
 import { FaHome } from "react-icons/fa";
 
 import MenuOptionsMobile from "./menu/MenuOptionsMobile";
+import LanguageSelector from "./Language/LanguageSelector";
 
 const Layout = () => {
 	const navigate = useNavigate();
@@ -41,11 +43,13 @@ const Layout = () => {
 	const { colorScheme } = useMantineColorScheme();
 	const dark = colorScheme === "dark";
 
+	const { t } = useTranslation();
+
 	//I link Intern, E Link External
 	const list = [
 		{
 			id: 0,
-			name: "Main",
+			name: t("app.general.menu.main.label"),
 			link: "/",
 			ico: <FaHome />,
 			typeLink: "I",
@@ -54,7 +58,7 @@ const Layout = () => {
 		},
 		{
 			id: 1,
-			name: "Projects",
+			name: t("app.general.menu.projects.label"),
 			link: "/projects",
 			ico: <GrProjects />,
 			typeLink: "I",
@@ -63,7 +67,7 @@ const Layout = () => {
 		},
 		{
 			id: 2,
-			name: "Contact",
+			name: t("app.general.menu.contact.label"),
 			link: "/contact",
 			ico: <IoMdMail />,
 			typeLink: "I",
@@ -72,7 +76,7 @@ const Layout = () => {
 		},
 		{
 			id: 3,
-			name: "GitHub",
+			name: t("app.general.menu.gibhub.label"),
 			link: "https://github.com/jjmirandaa86",
 			ico: <FaGithub />,
 			typeLink: "E",
@@ -81,10 +85,10 @@ const Layout = () => {
 		},
 		{
 			id: 4,
-			name: "CV",
+			name: t("app.general.menu.cv.label"),
 			link: "https://acertijo.dev/assets/pdf/CV-Jefferson Miranda.pdf",
 			ico: <SiReaddotcv />,
-			typeLink: "E",
+			typeLink: "C",
 			visibleMenuMain: "Y",
 			visibleMenuMobile: "Y",
 		},
@@ -120,6 +124,7 @@ const Layout = () => {
 								</Group>
 							</Group>
 							<Mode />
+							<LanguageSelector />
 						</Group>
 						<Space h="md" />
 					</Container>
@@ -127,7 +132,7 @@ const Layout = () => {
 				<AppShell.Navbar py="md" px={4}>
 					<AppShell.Section>
 						<div style={{ padding: 20 }}>
-							<Text fw={700}>Menu</Text>
+							<Text fw={700}>{t("app.general.menu.slice.title")} </Text>
 						</div>
 					</AppShell.Section>
 					<AppShell.Section grow my="md">

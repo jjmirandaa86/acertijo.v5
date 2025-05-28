@@ -16,6 +16,8 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { useMantineColorScheme } from "@mantine/core";
+import { useTranslation } from "react-i18next";
+
 import HeadPage from "./Home/HeadPage";
 import { useForm } from "@mantine/form";
 import { IoIosMail } from "react-icons/io";
@@ -35,10 +37,11 @@ const Contact = () => {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [showSuccess, setShowSuccess] = useState(false);
 	const [showError, setShowError] = useState(false);
-	const phoneNumber = "(+61) 0423 775 180",
-		email = "jjmirandaa86@gmail.com",
-		sendMessageWhatsapp =
-			"https://wa.me/+61423775180?text=Hello,+I+would+like+to+contact+you.+Thank+you";
+	const { t } = useTranslation();
+
+	const phoneNumber = t("app.contact.phone.description"),
+		email = t("app.contact.email.description"),
+		sendMessageWhatsapp = t("app.contact.whats-app.description");
 
 	const form = useForm({
 		initialValues: {
@@ -91,7 +94,7 @@ const Contact = () => {
 			<HeadPage isMobile={isMobile} />
 			<Space h="md" />
 			<Title order={1} size="h1" lh={"xs"} style={{ display: "none" }}>
-				Jefferson Miranda
+				{t("app.home.name")}
 			</Title>
 			<Container size={"sm"}>
 				<Space h="md" />
@@ -100,7 +103,7 @@ const Contact = () => {
 						<Card shadow="xl">
 							<Space h="md" />
 							<Title td={"underline"} order={2} mb="xl">
-								Contact Form
+								{t("app.contact.title")}
 							</Title>
 							{showSuccess && (
 								<Notification
@@ -110,7 +113,7 @@ const Contact = () => {
 									mb="md"
 									onClose={() => setShowSuccess(false)}
 								>
-									Your message was sent.
+									{t("app.contact.message-success")}
 								</Notification>
 							)}
 
@@ -122,7 +125,7 @@ const Contact = () => {
 									mb="md"
 									onClose={() => setShowError(false)}
 								>
-									We had a problem. Please try one more time.
+									{t("app.contact.message-error")}
 								</Notification>
 							)}
 
@@ -187,7 +190,7 @@ const Contact = () => {
 												style={{ padding: 0, margin: 0 }}
 											>
 												<Text size="h1" component="h3">
-													<Text fw={700}>Phone Number:</Text>
+													<Text fw={700}>{t("app.contact.phone.title")} </Text>
 													<div style={{ padding: 4 }}>{phoneNumber.trim()}</div>
 												</Text>
 											</Button>
@@ -211,7 +214,7 @@ const Contact = () => {
 												style={{ padding: 0, margin: 0 }}
 											>
 												<Text size="h1" component="h3">
-													<Text fw={700}>Email:</Text>
+													<Text fw={700}>{t("app.contact.email.title")}</Text>
 													<div style={{ padding: 4 }}>{email.trim()}</div>
 												</Text>
 											</Button>
