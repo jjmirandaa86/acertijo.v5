@@ -39,7 +39,7 @@
             "type-services": "FrontEnd BackEnd Database DevOps",
             "work": {
                 "title": "Resumen",
-                "description": "Jefferson es un desarrollador freelance full-stack con sede en Sydney con más de 12 años de experiencia en la elaboración de soluciones digitales escalables y centradas en el usuario. Me encanta convertir ideas en aplicaciones reales, desde la planificación y el diseño hasta el código limpio y funcional. Me apasiona especialmente crear productos que resuelvan problemas y creen valor a través de la tecnología. Fuera del trabajo, me gusta mantenerme activo, por lo general salir a correr o explorar nuevos lugares.",
+                "description": "Jefferson es un desarrollador freelance full-stack con sede en Sydney con más de 12 años de experiencia en la elaboración de soluciones digitales escalables y centradas en el usuario. Me encanta convertir ideas en aplicaciones reales, desde la planificación y el diseño, aplicando código limpio y funcional. Me apasiona especialmente crear productos que resuelvan problemas y creen valor a través de la tecnología. Fuera del trabajo, me gusta mantenerme activo, por lo general salir a correr o explorar nuevos lugares.",
                 "portfolio": "Portafolio"
             },
             "bio": {
@@ -246,8 +246,8 @@
                     "year": 2025,
                     "name": "Api Llama Removals",
                     "description": "Servicio API REST que gestiona las solicitudes de aplicaciones frontales para Mudanzas Llama.",
-                    "descriptionLonger": "La API de Mudanzas Llama es la columna vertebral de nuestra plataforma de cara al cliente, permitiendo interacciones seguras y eficientes entre nuestro sitio web, base de datos y servicios externos. \n\n Diseñado para soportar varias solicitudes, esta API RESTful maneja: \n\n - Solicitudes de presupuesto (a través de envíos POST). \n\n - Datos de servicio/área de cobertura (puntos finales GET). \n\n - Comunicaciones con los clientes (formularios de contacto, sistemas de devolución de llamada). \n\n - Operaciones administrativas (gestión de reservas, seguimiento de recursos). \n\n Construida con MySQL para la fiabilidad transaccional y autenticación JWT para la seguridad, la API garantiza operaciones rápidas y auditables, críticas para la logística en movimiento.",
-                    "descriptionTech":  "La API REST de Llama Removals implementa métodos HTTP estándar (GET, POST, PUT/PATCH, DELETE) para impulsar todas las interacciones de la plataforma. Basada en una base de datos MySQL para un procesamiento de transacciones fiable, la API utiliza autenticación por token de portador para proteger los endpoints, con limitación a las operaciones públicas (abierto). Todas las respuestas siguen el formato JSON con códigos de estado RESTful (200 para solicitudes exitosas, 401 para acceso no autorizado, etc.), lo que garantiza una integración predecible para clientes web y móviles, manteniendo la velocidad y la fiabilidad propias de los servicios de mudanzas de Llama Removals.",
+                    "descriptionLonger": "La API de Mudanzas Llama es la columna vertebral de nuestra plataforma de cara al cliente, permitiendo interacciones seguras y eficientes entre nuestro sitio web, base de datos y servicios externos. \n\n Diseñado para soportar varias solicitudes, esta API RESTful maneja: \n - Solicitudes de presupuesto (a través de envíos POST). \n - Datos de servicio/área de cobertura (puntos finales GET). \n - Comunicaciones con los clientes (formularios de contacto, sistemas de devolución de llamada). \n - Operaciones administrativas (gestión de reservas, seguimiento de recursos). \n\n Construida con MySQL para la fiabilidad transaccional y autenticación JWT para la seguridad, la API garantiza operaciones rápidas y auditables, críticas para la logística en movimiento.",
+                    "descriptionTech":  "La API REST de Llama Removals implementa métodos HTTP estándar (GET, POST, PUT/PATCH, DELETE) para impulsar todas las interacciones de la plataforma. Basada en una base de datos MySQL para el almacenamiento en cada transacciones, la API utiliza autenticación por token, para proteger los endpoints, con limitación a las operaciones públicas. Todas las respuestas siguen el formato JSON con códigos de estado RESTful (200 para solicitudes exitosas, 401 para acceso no autorizado, etc.), lo que garantiza una integración predecible para clientes web y móviles, manteniendo la velocidad y la fiabilidad en el intercambio de datos en la API de mudanzas de Llama Removals.",
                     "website": "api.llamaremovals.com.au",
                     "websiteLong": "https://api.llamaremovals.com.au",
                     "platform": "Api RESTful (BackEnd)",
@@ -527,12 +527,12 @@
                 "certificate-10": {
                     "id": 10,
                     "type": "Diploma",
-                    "name": "FrondEnd/BackEnd",
+                    "name": "FrondEnd / BackEnd",
                     "year": 2025,
                     "country": "Sydney, 🇦🇺",
                     "where": "Laneway",
-                    "description": "Elevar los conocimientos lingüísticos y, al mismo tiempo, conocer las nuevas tecnologías modernas.",
-                    "linkImage": "/assets/pdf/certificates/Diploma-ILSC.pdf",
+                    "description": "Elevar mis conocimientos lingüísticos y, al mismo tiempo adquirir conocimiento en modernas tecnologías.",
+                    "linkImage": "",
                     "icoImage": "",
                     "visible": true,
                     "stars": 5

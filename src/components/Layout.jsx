@@ -117,7 +117,7 @@ const Layout = () => {
 										window.scrollTo(0, 0);
 									}}
 								>
-									<Logo width={180} />
+									<Logo toggle={toggle} width={180} />
 								</div>
 								<Group ml="xl" gap={0} visibleFrom="sm">
 									<MenuOptions list={list} />

@@ -204,7 +204,7 @@ const ShowWork = ({ project }) => {
 								opacity: 0.4,
 							},
 							{
-								name: t("app.projects.team"),
+								name: "Team",
 								color: "yellow.6",
 								opacity: 0.3,
 							},

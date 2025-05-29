@@ -529,12 +529,12 @@
                 "certificate-10": {
                     "id": 10,
                     "type": "Diploma",
-                    "name": "FrondEnd/BackEnd",
+                    "name": "FrondEnd / BackEnd",
                     "year": 2025,
                     "country": "Sydney, 🇦🇺",
                     "where": "Laneway",
                     "description": "Taking this course to improve my language skills and at the same time learn about new technologies.",
-                    "linkImage": "/assets/pdf/certificates/Diploma-ILSC.pdf",
+                    "linkImage": "",
                     "icoImage": "",
                     "visible": true,
                     "stars": 5

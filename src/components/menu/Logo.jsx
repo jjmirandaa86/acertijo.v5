@@ -4,7 +4,7 @@ import LogoWhite from "../../assets/png/acertijo-logo-white.png";
 import { useMantineColorScheme } from "@mantine/core";
 import { useTranslation } from "react-i18next";
 
-const Logo = ({ width, height }) => {
+const Logo = ({ width, height, toggle = () => {} }) => {
 	const { colorScheme } = useMantineColorScheme();
 	const { t } = useTranslation();
 	const dark = colorScheme === "dark";
@@ -17,6 +17,7 @@ const Logo = ({ width, height }) => {
 				height={height}
 				className="App-logo"
 				alt={t("app.general.logo.alt")}
+				onClick={toggle}
 			/>
 		</>
 	);
