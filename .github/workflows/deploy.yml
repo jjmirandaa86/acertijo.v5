@@ -1,0 +1,40 @@
+name: CI/CD Deploy Web Acertijo.dev
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Build and Push Docker Image
+        run: |
+          IMAGE=ghcr.io/${{ github.repository }}:latest
+          docker build -t $IMAGE .
+          docker push $IMAGE
+
+      - name: Setup SSH
+        run: |
+          echo "${{ secrets.SSH_KEY }}" > key.pem
+          chmod 600 key.pem
+
+      - name: Deploy to Server
+        run: |
+          ssh -o StrictHostKeyChecking=no -i key.pem root@${{ secrets.SERVER_IP }} << 'EOF'
+            cd /app/myproject
+            docker pull ghcr.io/${{ github.repository }}:latest
+            docker compose up -d
+          EOF
