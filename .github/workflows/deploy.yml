@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to Server
         run: |
           ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} << EOF
-            cd /app/myprojects || exit 1
+            cd /app/projects || exit 1
 
             echo "📦 Pulling image..."
             docker pull ghcr.io/${{ github.repository }}:latest
