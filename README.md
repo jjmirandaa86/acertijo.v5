@@ -1,6 +1,6 @@
 ![Logo](https://raw.githubusercontent.com/jjmirandaa86/acertijo.v5/refs/heads/main/public/assets/png/acertijo-logo-black.png)
 
-Jefferson
+Jefferson Miranda
 
 # Proyecto: Personal Page acertijo
 
