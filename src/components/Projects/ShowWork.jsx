@@ -24,6 +24,7 @@ import { RadarChart } from "@mantine/charts";
 import { Carousel } from "@mantine/carousel";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import { FaGithub } from "react-icons/fa";
+import { TbWorldWww } from "react-icons/tb";
 
 const ShowWork = ({ project }) => {
 	const isMobile = useMediaQuery("(max-width: 30.25em)");
@@ -39,7 +40,6 @@ const ShowWork = ({ project }) => {
 		id,
 		year,
 		name,
-		description,
 		descriptionLonger,
 		descriptionTech,
 		website,
@@ -88,12 +88,12 @@ const ShowWork = ({ project }) => {
 				</Breadcrumbs>
 				<Space h="xl" />
 				<Grid style={{ padding: 5 }}>
-					<Grid.Col span={{ base: 8, md: 10, lg: 10 }}>
+					<Grid.Col span={{ base: 8, md: 8, lg: 8 }}>
 						<Title order={2} size={"h1"} td={"underline"}>
 							{name}
 						</Title>
 					</Grid.Col>
-					<Grid.Col span={{ base: 4, md: 2, lg: 2 }}>
+					<Grid.Col span={{ base: 4, md: 4, lg: 4 }}>
 						<Center>
 							<Button
 								onClick={() => window.open(gitHub, "_blank")}
@@ -103,6 +103,19 @@ const ShowWork = ({ project }) => {
 								<FaGithub size={32} />
 								<RxOpenInNewWindow />
 							</Button>
+							{website && (
+								<>
+									<Space w="xs" />
+									<Button
+										onClick={() => window.open("http://" + website, "_blank")}
+										size="md"
+										color="yellow.6"
+									>
+										<TbWorldWww size={32} />
+										<RxOpenInNewWindow />
+									</Button>
+								</>
+							)}
 						</Center>
 					</Grid.Col>
 				</Grid>
