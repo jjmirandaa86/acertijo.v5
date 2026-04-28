@@ -8,12 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test SSH to server
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+      - name: Setup SSH
+  run: |
+    mkdir -p ~/.ssh
+    echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+    chmod 600 ~/.ssh/id_rsa
+    ssh-keyscan -H 134.199.163.224 >> ~/.ssh/known_hosts
 
-          ssh-keyscan -H 134.199.163.224 >> ~/.ssh/known_hosts
-
-          ssh -i ~/.ssh/id_rsa root@134.199.163.224 "echo '✅ Conexión exitosa desde GitHub Actions'"
+- name: Test SSH
+  run: |
+    ssh -i ~/.ssh/id_rsa root@134.199.163.224 "echo OK"
