@@ -48,7 +48,8 @@ jobs:
             echo "🚀 Running new container..."
             docker run -d \
               --name acertijo \
-              -p 3000:3000 \
+              -p 80:80 \
+              --restart unless-stopped \
               ghcr.io/${{ github.repository }}:latest
 
             echo "✅ Deploy completed"
