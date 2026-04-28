@@ -34,7 +34,7 @@ jobs:
       - name: Deploy to Server
         run: |
           ssh -o StrictHostKeyChecking=no -i key.pem root@${{ secrets.SERVER_IP }} << 'EOF'
-            cd /app/myproject
+            cd /app/myprojects
             docker pull ghcr.io/${{ github.repository }}:latest
             docker compose up -d
           EOF
