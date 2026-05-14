@@ -1,48 +1,74 @@
 import { useEffect, useState } from "react";
-import i18next from "i18next";
+import { Select } from "@mantine/core";
 import { useTranslation } from "react-i18next";
-import { ActionIcon, Select } from "@mantine/core";
-type languageOption = { language: string; code: string; flag: string };
 
-const languageOptions: languageOption[] = [
-	{ language: "English", code: "en", flag: "🇺🇸" },
-	{ language: "Spanish", code: "es", flag: "🇪🇸" },
+type LanguageOption = {
+  language: string;
+  code: string;
+  flag: string;
+};
+
+const languageOptions: LanguageOption[] = [
+  { language: "English", code: "en", flag: "🇺🇸" },
+  { language: "Spanish", code: "es", flag: "🇪🇸" },
 ];
 
 const LanguageSelector = () => {
-	// Set the initial language from i18next's detected or default language
-	const [language, setLanguage] = useState(i18next.language);
+  const { i18n } = useTranslation();
 
-	const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language || "en");
 
-	const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-		const selectedLanguage = e.target.value;
-		setLanguage(selectedLanguage);
-		i18next.changeLanguage(selectedLanguage); // Update language in i18next
-	};
+  const data = languageOptions.map(({ language, code, flag }) => ({
+    value: code,
+    label: flag,
+    description: language,
+  }));
 
-	useEffect(() => {
-		document.body.dir = i18n.dir(); //sets the body to ltr or rtl
-	}, [i18n, i18n.language]);
+  const handleLanguageChange = (value: string | null) => {
+    if (!value) return;
 
-	return (
-		<>
-			<select
-				id="language"
-				value={language}
-				onChange={handleLanguageChange}
-				style={{ height: "40px" }}
-			>
-				{languageOptions.map(({ language, code, flag }, key) => (
-					<option value={code} key={key}>
-						{flag}
-					</option>
-				))}
-			</select>
-		</>
-	);
+    setLanguage(value);
+    i18n.changeLanguage(value);
+    localStorage.setItem("language", value);
+  };
+
+  useEffect(() => {
+    document.body.dir = i18n.dir();
+  }, [i18n, i18n.language]);
+
+  return (
+    <Select
+      value={language}
+      onChange={handleLanguageChange}
+      data={data}
+      size="xs"
+      w={72}
+      variant="subtle"
+      radius="xl"
+      checkIconPosition="right"
+      allowDeselect={false}
+      comboboxProps={{
+        width: 120,
+        position: "bottom-end",
+      }}
+      styles={{
+        input: {
+          border: "none",
+          paddingLeft: 8,
+          paddingRight: 8,
+          fontSize: 18,
+          background: "transparent",
+          cursor: "pointer",
+        },
+        dropdown: {
+          minWidth: 100,
+        },
+        option: {
+          fontSize: 16,
+        },
+      }}
+    />
+  );
 };
 
 export default LanguageSelector;
-
-//<ActionIcon size={40} radius="md" color="blue.9" title="Toggle color scheme"></ActionIcon>

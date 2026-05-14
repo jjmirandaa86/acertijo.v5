@@ -38,6 +38,9 @@ jobs:
           ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} << EOF
             cd /app/projects || exit 1
 
+            echo "🌐 Creating Docker network if not exists..."
+            docker network inspect app_network >/dev/null 2>&1 || docker network create app_network
+
             echo "📦 Pulling image..."
             docker pull ghcr.io/${{ github.repository }}:latest
 
@@ -48,6 +51,7 @@ jobs:
             echo "🚀 Running new container..."
             docker run -d \
               --name acertijo \
+              --network app_network \
               -p 80:80 \
               --restart unless-stopped \
               ghcr.io/${{ github.repository }}:latest
