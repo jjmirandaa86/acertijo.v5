@@ -52,7 +52,6 @@ jobs:
             docker run -d \
               --name acertijo \
               --network app_network \
-              -p 80:80 \
               --restart unless-stopped \
               ghcr.io/${{ github.repository }}:latest
 
