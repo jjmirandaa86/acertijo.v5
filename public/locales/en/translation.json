@@ -509,7 +509,10 @@
               "Team": 0
             }
           ],
-          "diagram": {},
+          "diagram": {
+            "url": "/assets/webp/playface-api/diagram.webp",
+            "alt": "Diagrama de procesos - Api"
+          },
           "carousel": 400
         }
       }
