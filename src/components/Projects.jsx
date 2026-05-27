@@ -21,6 +21,7 @@ import LearningWords from "../assets/webp/learningWords.webp";
 import ApiLlamaRemovals from "../assets/webp/apillamaremovals.webp";
 import SurveyTesalia from "../assets/webp/surveyTesalia.webp";
 import PlayFace from "../assets/webp/playface.webp";
+import PlayFaceApi from "../assets/webp/playface-api.webp";
 
 const Projects = () => {
   const isMobile = useMediaQuery("(max-width: 30.25em)");
@@ -71,6 +72,15 @@ const Projects = () => {
       url: "https://playface.acertijo.dev",
       moreInfo: "/projects/playface",
       image: PlayFace,
+      type: "W",
+    },
+    {
+      id: 6,
+      name: t("app.projects.list.project-6.name"),
+      description: t("app.projects.list.project-6.description"),
+      url: "https://playface-api.acertijo.dev/health",
+      moreInfo: "/projects/playface-api",
+      image: PlayFaceApi,
       type: "W",
     },
   ];

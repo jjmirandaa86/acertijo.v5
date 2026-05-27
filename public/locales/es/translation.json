@@ -450,6 +450,66 @@
           ],
           "diagram": {},
           "carousel": 400
+        },
+        "project-6": {
+          "id": 6,
+          "year": 2026,
+          "name": "Play face API",
+          "description": "API backend con procesamiento de imágenes en tiempo real mediante inteligencia artificial.",
+          "descriptionLonger": "La API fue diseñada para ofrecer servicios avanzados de inteligencia artificial, visión computacional y análisis facial en tiempo real.\n\nLa plataforma permite procesar imágenes automáticamente para generar caricaturas, efectos visuales, análisis emocionales y experiencias gamificadas basadas en reconocimiento facial. Además, soporta almacenamiento histórico de emociones y capturas faciales tomadas periódicamente, permitiendo generar métricas, estadísticas y seguimiento del comportamiento emocional de los usuarios.\n\nPara el procesamiento automatizado de imágenes se utilizan flujos de trabajo con n8n y servicios de inteligencia artificial de OpenAI, utilizando modelos optimizados y de bajo costo para reducir el consumo de recursos y mantener una generación de imágenes eficiente y escalable.\n\nLa arquitectura backend fue diseñada siguiendo principios de arquitectura hexagonal para garantizar escalabilidad, mantenibilidad y desacoplamiento entre la lógica de negocio, servicios de inteligencia artificial y almacenamiento de datos. El sistema incorpora seguridad mediante control de tráfico y protección de APIs utilizando Express Rate Limit, así como repositorios separados para almacenamiento de imágenes originales y fotos procesadas.",
+          "descriptionTech": "La API fue desarrollada utilizando Node.js y Express JS como núcleo backend, implementando una arquitectura hexagonal orientada a escalabilidad y mantenibilidad. El sistema integra servicios de inteligencia artificial, reconocimiento facial y visión computacional para realizar procesamiento de imágenes y análisis emocional en tiempo real.\n\nLa plataforma utiliza MySQL para almacenar información relacionada con emociones detectadas, métricas, capturas faciales y registros históricos del comportamiento del usuario. Además, cuenta con repositorios organizados para almacenar fotografías originales subidas por los usuarios y versiones procesadas generadas automáticamente por los servicios de IA.\n\nEl backend incorpora Express Rate Limit para proteger la infraestructura frente a abuso de peticiones y optimizar el consumo de recursos. También implementa CORS para permitir una comunicación segura y controlada entre el frontend y backend.\n\nLa solución integra flujos automatizados de procesamiento de imágenes mediante n8n y servicios de inteligencia artificial de OpenAI, permitiendo generar caricaturas, efectos visuales y transformaciones creativas automáticamente.\n\nLa arquitectura está preparada para integrarse con sistemas distribuidos desplegados mediante contenedores Docker sobre servidores Linux Ubuntu. El proceso de despliegue continuo (CI/CD) se realiza utilizando GitHub Actions, automatizando la construcción, publicación y actualización de los servicios en producción.",
+          "website": "playface-api.acertijo.dev/health",
+          "websiteLong": "https://playface-api.acertijo.dev/health",
+          "platform": "Backend API RESTful",
+          "stack": "Node.js, Express JS, CORS, Express Rate Limit \n MySQL2 \n Arquitectura Hexagonal",
+          "server": "Digital Ocean - Droplets (Dedicated server). \nLinux Ubuntu distribución (Docker containers).",
+          "gitHub": "https://github.com/jjmirandaa86/uefn-backend",
+          "images": [
+            {
+              "id": 1,
+              "link": "/assets/webp/playface-api/playfaceapi.webp",
+              "alt": "Backend API - Play face API"
+            }
+          ],
+          "dataChart": [
+            {
+              "task": "Requerimientos",
+              "Jefferson": 70,
+              "Team": 30
+            },
+            {
+              "task": "Análisis",
+              "Jefferson": 70,
+              "Team": 30
+            },
+            {
+              "task": "Diseño",
+              "Jefferson": 90,
+              "Team": 10
+            },
+            {
+              "task": "Desarrollo",
+              "Jefferson": 100,
+              "Team": 0
+            },
+            {
+              "task": "Pruebas",
+              "Jefferson": 100,
+              "Team": 0
+            },
+            {
+              "task": "Despliegue",
+              "Jefferson": 100,
+              "Team": 0
+            },
+            {
+              "task": "Mantenimiento",
+              "Jefferson": 100,
+              "Team": 0
+            }
+          ],
+          "diagram": {},
+          "carousel": 400
         }
       }
     },

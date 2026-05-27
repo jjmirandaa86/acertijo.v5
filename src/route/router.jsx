@@ -38,6 +38,10 @@ export const router = createBrowserRouter(
         path="projects/playface"
         element={<ShowWork project={"app.projects.list.project-5"} />}
       />
+      <Route
+        path="projects/playface-api"
+        element={<ShowWork project={"app.projects.list.project-6"} />}
+      />
       <Route path="*" element={<NotFound />} />
     </Route>,
   ),
