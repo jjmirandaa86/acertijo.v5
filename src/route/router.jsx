@@ -34,6 +34,10 @@ export const router = createBrowserRouter(
         path="projects/surveytesalia"
         element={<ShowWork project={"app.projects.list.project-4"} />}
       />
+      <Route
+        path="projects/playface"
+        element={<ShowWork project={"app.projects.list.project-5"} />}
+      />
       <Route path="*" element={<NotFound />} />
     </Route>,
   ),

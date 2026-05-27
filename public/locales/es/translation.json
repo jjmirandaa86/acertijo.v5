@@ -380,6 +380,76 @@
           ],
           "diagram": {},
           "carousel": 400
+        },
+        "project-5": {
+          "id": 5,
+          "year": 2026,
+          "name": "Play face",
+          "description": "Plataforma interactiva basada en inteligencia artificial y reconocimiento facial.",
+          "descriptionLonger": "La aplicación está diseñada para ofrecer una experiencia interactiva utilizando inteligencia artificial, visión computacional y análisis facial en tiempo real. Mediante el uso de la cámara del dispositivo, el sistema detecta emociones, expresiones faciales, género y edad aproximada del usuario, identificando reacciones como felicidad, tristeza, sorpresa, enojo o disgusto para transformarlas en experiencias visuales inmersivas y personalizadas.\n\nLa plataforma permite generar caricaturas, efectos visuales, imágenes estilizadas y dinámicas gamificadas basadas en el comportamiento facial del usuario. Además, incorpora un juego interactivo que puede controlarse únicamente con el rostro, utilizando gestos y expresiones faciales como sonreír, abrir la boca, levantar las cejas o mover la cabeza para ejecutar acciones dentro del juego.\n\nLa herramienta busca demostrar cómo la inteligencia artificial puede integrarse con experiencias creativas y de entretenimiento digital, ofreciendo una interacción innovadora entre el usuario y el sistema mediante reconocimiento facial avanzado, detección de rostros, análisis emocional, estimación de edad y reconocimiento de género.",
+          "descriptionTech": "La aplicación fue desarrollada utilizando React JS en el frontend para construir una interfaz moderna, dinámica y responsiva enfocada en experiencias visuales interactivas. En el backend se integraron servicios de procesamiento de imágenes y reconocimiento facial utilizando inteligencia artificial y visión computacional.\n\nEl sistema utiliza tecnologías de análisis facial en tiempo real para detectar emociones y procesar imágenes automáticamente, permitiendo generar caricaturas, efectos visuales y transformaciones creativas basadas en las expresiones del usuario.\n\nLa arquitectura está preparada para integrarse con flujos automatizados de procesamiento de imágenes y servicios de IA, garantizando escalabilidad, alto rendimiento y una experiencia fluida para el usuario.",
+          "website": "playface.acertijo.dev",
+          "websiteLong": "https://playface.acertijo.dev",
+          "platform": "Sito Web (FrontEnd)",
+          "stack": "React JS, Vite, Mantine UI, React-Router-DOM \n Face-api.js, Recharts.  ",
+          "server": "Digital Ocean - Droplets (Dedicated server). \nLinux Ubuntu distribución (Docker containers).",
+          "gitHub": "https://github.com/jjmirandaa86/uefn-frontend",
+          "images": [
+            {
+              "id": 1,
+              "link": "/assets/webp/playface/Playface-Dashboard.webp",
+              "alt": "FrontEnd - Panel"
+            },
+            {
+              "id": 2,
+              "link": "/assets/webp/playface/Playface-FunnyMoments.webp",
+              "alt": "FrontEnd - Momentos divertidos"
+            },
+            {
+              "id": 3,
+              "link": "/assets/webp/playface/Playface-Charts.webp",
+              "alt": "FrontEnd - Graficas"
+            }
+          ],
+          "dataChart": [
+            {
+              "task": "Requerimientos",
+              "Jefferson": 30,
+              "Team": 70
+            },
+            {
+              "task": "Análisis",
+              "Jefferson": 70,
+              "Team": 30
+            },
+            {
+              "task": "Diseño",
+              "Jefferson": 90,
+              "Team": 10
+            },
+            {
+              "task": "Desarrollo",
+              "Jefferson": 100,
+              "Team": 0
+            },
+            {
+              "task": "Pruebas",
+              "Jefferson": 50,
+              "Team": 50
+            },
+            {
+              "task": "Despliegue",
+              "Jefferson": 100,
+              "Team": 0
+            },
+            {
+              "task": "Mantenimiento",
+              "Jefferson": 100,
+              "Team": 0
+            }
+          ],
+          "diagram": {},
+          "carousel": 400
         }
       }
     },

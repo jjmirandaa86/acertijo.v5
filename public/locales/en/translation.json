@@ -381,6 +381,76 @@
           ],
           "diagram": {},
           "carousel": 400
+        },
+        "project-5": {
+          "id": 5,
+          "year": 2026,
+          "name": "Play face",
+          "description": "Interactive platform powered by artificial intelligence and facial recognition.",
+          "descriptionLonger": "The application is designed to provide an interactive experience using artificial intelligence, computer vision, and real-time facial analysis. By using the device camera, the system detects emotions, facial expressions, gender, and the user's approximate age, identifying reactions such as happiness, sadness, surprise, anger, or disgust to transform them into immersive and personalized visual experiences.\n\nThe platform allows users to generate cartoons, visual effects, stylized images, and gamified experiences based on facial behavior. It also includes an interactive game that can be controlled entirely with the face, using gestures and facial expressions such as smiling, opening the mouth, raising eyebrows, or moving the head to perform in-game actions.\n\nThe tool aims to demonstrate how artificial intelligence can be integrated with creative digital entertainment experiences, offering innovative interaction between the user and the system through advanced facial recognition, face detection, emotional analysis, age estimation, and gender recognition.",
+          "descriptionTech": "The application was developed using React JS on the frontend to build a modern, dynamic, and responsive interface focused on interactive visual experiences. On the backend, image processing and facial recognition services were integrated using artificial intelligence and computer vision.\n\nThe system uses real-time facial analysis technologies to detect emotions and automatically process images, enabling the generation of cartoons, visual effects, and creative transformations based on user expressions.\n\nThe architecture is designed to integrate with automated image-processing workflows and AI services, ensuring scalability, high performance, and a smooth user experience.",
+          "website": "playface.acertijo.dev",
+          "websiteLong": "https://playface.acertijo.dev",
+          "platform": "Website (FrontEnd)",
+          "stack": "React JS, Vite, Mantine UI, React-Router-DOM \n Face-api.js, Recharts.",
+          "server": "Digital Ocean - Droplets (Dedicated server). \nLinux Ubuntu distribution (Docker containers).",
+          "gitHub": "https://github.com/jjmirandaa86/uefn-frontend",
+          "images": [
+            {
+              "id": 1,
+              "link": "/assets/webp/playface/Playface-Dashboard.webp",
+              "alt": "FrontEnd - Dashboard"
+            },
+            {
+              "id": 2,
+              "link": "/assets/webp/playface/Playface-FunnyMoments.webp",
+              "alt": "FrontEnd - Funny moments"
+            },
+            {
+              "id": 3,
+              "link": "/assets/webp/playface/Playface-Charts.webp",
+              "alt": "FrontEnd - Charts"
+            }
+          ],
+          "dataChart": [
+            {
+              "task": "Requirements",
+              "Jefferson": 30,
+              "Team": 70
+            },
+            {
+              "task": "Analysis",
+              "Jefferson": 70,
+              "Team": 30
+            },
+            {
+              "task": "Design",
+              "Jefferson": 90,
+              "Team": 10
+            },
+            {
+              "task": "Development",
+              "Jefferson": 100,
+              "Team": 0
+            },
+            {
+              "task": "Testing",
+              "Jefferson": 50,
+              "Team": 50
+            },
+            {
+              "task": "Deployment",
+              "Jefferson": 100,
+              "Team": 0
+            },
+            {
+              "task": "Maintenance",
+              "Jefferson": 100,
+              "Team": 0
+            }
+          ],
+          "diagram": {},
+          "carousel": 400
         }
       }
     },

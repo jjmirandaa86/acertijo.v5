@@ -20,6 +20,7 @@ import LlamaRemovals from "../assets/webp/llamaRemovals.webp";
 import LearningWords from "../assets/webp/learningWords.webp";
 import ApiLlamaRemovals from "../assets/webp/apillamaremovals.webp";
 import SurveyTesalia from "../assets/webp/surveyTesalia.webp";
+import PlayFace from "../assets/webp/playface.webp";
 
 const Projects = () => {
   const isMobile = useMediaQuery("(max-width: 30.25em)");
@@ -62,6 +63,15 @@ const Projects = () => {
       moreInfo: "/projects/surveytesalia",
       image: SurveyTesalia,
       type: "OW",
+    },
+    {
+      id: 5,
+      name: t("app.projects.list.project-5.name"),
+      description: t("app.projects.list.project-5.description"),
+      url: "https://playface.acertijo.dev",
+      moreInfo: "/projects/playface",
+      image: PlayFace,
+      type: "W",
     },
   ];
 
