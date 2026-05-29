@@ -1,3 +1,7 @@
+# Secrets en GitHub → Settings → Secrets and variables → Actions:
+#   SSH_KEY         — clave privada SSH del droplet
+#   SERVER_IP       — IP del servidor
+#   ACERTIJO_V5_ENV — contenido completo del .env de producción (ej. VITE_URL_API=https://api.acertijo.dev)
 name: CI/CD Deploy Web Acertijo.dev
 
 on:
@@ -33,10 +37,27 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
 
+      - name: Sync .env from GitHub secret to server
+        env:
+          ACERTIJO_V5_ENV: ${{ secrets.ACERTIJO_V5_ENV }}
+        run: |
+          if [ -z "$ACERTIJO_V5_ENV" ]; then
+            echo "❌ Falta el secret ACERTIJO_V5_ENV"
+            exit 1
+          fi
+          printf '%s\n' "$ACERTIJO_V5_ENV" > /tmp/acertijo.env
+          ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} "mkdir -p /app/projects"
+          scp -i ~/.ssh/id_rsa /tmp/acertijo.env root@${{ secrets.SERVER_IP }}:/app/projects/acertijo.env
+          ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} "chmod 600 /app/projects/acertijo.env"
+          rm -f /tmp/acertijo.env
+          echo "✅ .env sincronizado en el servidor"
+
       - name: Deploy to Server
         run: |
           ssh -i ~/.ssh/id_rsa root@${{ secrets.SERVER_IP }} << EOF
             cd /app/projects || exit 1
+
+            ENV_FILE=/app/projects/acertijo.env
 
             echo "🌐 Creating Docker network if not exists..."
             docker network inspect app_network >/dev/null 2>&1 || docker network create app_network
@@ -53,6 +74,7 @@ jobs:
               --name acertijo \
               --network app_network \
               --restart unless-stopped \
+              --env-file "\$ENV_FILE" \
               ghcr.io/${{ github.repository }}:latest
 
             echo "✅ Deploy completed"

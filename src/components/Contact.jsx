@@ -1,252 +1,179 @@
-import React, { useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 import {
-	TextInput,
-	Textarea,
-	Button,
-	Group,
-	Title,
-	Notification,
-	Space,
-	Card,
-	Grid,
-	Container,
-	Image,
-	Text,
+  Button,
+  Box,
+  Paper,
+  Stack,
+  Text,
+  TextInput,
+  Textarea,
+  Title,
+  Notification,
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
-import { useMantineColorScheme } from "@mantine/core";
-import { useTranslation } from "react-i18next";
-
-import HeadPage from "./Home/HeadPage";
 import { useForm } from "@mantine/form";
-import { IoIosMail } from "react-icons/io";
-import { IoMdSend } from "react-icons/io";
-import { FaCheckCircle } from "react-icons/fa";
-import { VscError } from "react-icons/vsc";
-import { FaWhatsapp } from "react-icons/fa";
-import { FiPhoneCall } from "react-icons/fi";
-import { MdOutlineMailOutline } from "react-icons/md";
+import {
+  FaCheckCircle,
+  FaTimesCircle,
+  FaUser,
+  FaEnvelope,
+  FaPaperPlane,
+} from "react-icons/fa";
+import { useMediaQuery } from "@mantine/hooks";
+import { useTranslation } from "react-i18next";
+import HeadPage from "./Home/HeadPage";
+import { Space, Container } from "@mantine/core";
+import ShinyText from "./ReactBits/ShinyText";
+import { sendEmail } from "../api/sendEmail";
 
-import WhatsappAustralia from "../assets/svg/whatsappAustralia.svg";
+function getErrorMessage(error, fallback) {
+  if (error.response?.data?.message) {
+    return error.response.data.message;
+  }
 
-const Contact = () => {
-	const isMobile = useMediaQuery("(max-width: 30.25em)");
-	const { colorScheme } = useMantineColorScheme();
-	const dark = colorScheme === "dark";
-	const [isSubmitting, setIsSubmitting] = useState(false);
-	const [showSuccess, setShowSuccess] = useState(false);
-	const [showError, setShowError] = useState(false);
-	const { t } = useTranslation();
+  if (!error.response) {
+    return fallback;
+  }
 
-	const phoneNumber = t("app.contact.phone.description"),
-		email = t("app.contact.email.description"),
-		sendMessageWhatsapp = t("app.contact.whats-app.description");
+  return fallback;
+}
 
-	const form = useForm({
-		initialValues: {
-			email: "",
-			subject: "",
-			message: "",
-		},
+export default function Contact() {
+  const isMobile = useMediaQuery("(max-width: 30.25em)");
+  const { t } = useTranslation();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
-		validate: {
-			email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid Email"),
-			subject: (value) =>
-				value.trim().length < 3 ? "Need a subject, more 3 letters" : null,
-			message: (value) =>
-				value.trim().length < 10 ? "Short message, more 3 words." : null,
-		},
-	});
+  const form = useForm({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
 
-	const handleSubmit = async (values) => {
-		setIsSubmitting(true);
-		setShowSuccess(false);
-		setShowError(false);
+    validate: {
+      name: (value) => (value.trim().length < 2 ? "Name is too short" : null),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+      message: (value) =>
+        value.trim().length < 10
+          ? "Message must have at least 10 characters"
+          : null,
+    },
+  });
 
-		let parameters = {
-			email: "",
-			password: "",
-		};
-		axios
-			.post("php/sendMail.php", parameters)
-			.then((response) => console.log(response))
-			.catch((error) => console.error(error));
+  const handleSubmit = async (values) => {
+    console.log("---------first");
+    setLoading(true);
+    setSuccess(false);
+    setError("");
 
-		try {
-			// Aquí iría tu lógica para enviar el formulario
-			console.log("Datos del formulario:", values);
-			// Simulamos un retraso de red
-			await new Promise((resolve) => setTimeout(resolve, 1500));
+    console.log(values);
+    try {
+      await sendEmail(values);
+      setSuccess(true);
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      setError(getErrorMessage(err, t("app.contact.message-error")));
+    } finally {
+      setLoading(false);
+    }
+  };
 
-			setShowSuccess(true);
-			form.reset();
-		} catch (error) {
-			console.error("Error al enviar el formulario:", error);
-			setShowError(true);
-		} finally {
-			setIsSubmitting(false);
-		}
-	};
+  return (
+    <>
+      {<HeadPage isMobile={isMobile} />}
+      <Container size={"sm"}>
+        <Box
+          pt="xl"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Paper shadow="lg" radius="lg" p="xl" w="100%" maw={500} withBorder>
+            <Title order={2} td={"underline"}>
+              {t("app.contact.title")}
+            </Title>
+            <Text c="dimmed" size="sm" mb="lg">
+              {t("app.contact.description")}
+            </Text>
 
-	return (
-		<>
-			<HeadPage isMobile={isMobile} />
-			<Space h="md" />
-			<Title order={1} size="h1" lh={"xs"} style={{ display: "none" }}>
-				{t("app.home.name")}
-			</Title>
-			<Container size={"sm"}>
-				<Space h="md" />
-				<Grid grow gutter="xs">
-					<Grid.Col style={{ display: "none" }} span={{ base: 12, md: 6, lg: 6 }}>
-						<Card shadow="xl">
-							<Space h="md" />
-							<Title td={"underline"} order={2} mb="xl">
-								{t("app.contact.title")}
-							</Title>
-							{showSuccess && (
-								<Notification
-									icon={<FaCheckCircle />}
-									color="teal"
-									title="Success"
-									mb="md"
-									onClose={() => setShowSuccess(false)}
-								>
-									{t("app.contact.message-success")}
-								</Notification>
-							)}
+            {success && (
+              <Notification
+                icon={<FaCheckCircle size={18} />}
+                color="green"
+                mb="md"
+                withCloseButton
+                onClose={() => setSuccess(false)}
+              >
+                {t("app.contact.message-success")}
+              </Notification>
+            )}
 
-							{showError && (
-								<Notification
-									icon={<VscError />}
-									color="red"
-									title="Error"
-									mb="md"
-									onClose={() => setShowError(false)}
-								>
-									{t("app.contact.message-error")}
-								</Notification>
-							)}
+            {error && (
+              <Notification
+                icon={<FaTimesCircle size={18} />}
+                color="red"
+                mb="md"
+                withCloseButton
+                onClose={() => setError("")}
+              >
+                {error}
+              </Notification>
+            )}
 
-							<form onSubmit={form.onSubmit(handleSubmit)}>
-								<TextInput
-									withAsterisk
-									label="Email"
-									placeholder="your@email.com"
-									leftSection={<IoIosMail />}
-									{...form.getInputProps("email")}
-									mb="md"
-								/>
+            <form onSubmit={form.onSubmit(handleSubmit)}>
+              <Stack>
+                <TextInput
+                  label={t("app.contact.name")}
+                  placeholder={t("app.contact.name-placeholder")}
+                  leftSection={<FaUser size={14} />}
+                  withAsterisk
+                  {...form.getInputProps("name")}
+                />
 
-								<TextInput
-									withAsterisk
-									label="Subject"
-									placeholder="¿What do you want me to talk?"
-									{...form.getInputProps("subject")}
-									mb="md"
-								/>
+                <TextInput
+                  label={t("app.contact.email")}
+                  placeholder={t("app.contact.email-placeholder")}
+                  leftSection={<FaEnvelope size={14} />}
+                  withAsterisk
+                  {...form.getInputProps("email")}
+                />
 
-								<Textarea
-									withAsterisk
-									label="Message"
-									placeholder="Write you message here..."
-									{...form.getInputProps("message")}
-									mb="md"
-									minRows={2}
-									maxRows={4}
-									resize="vertical"
-								/>
+                <Textarea
+                  label={t("app.contact.message")}
+                  placeholder={t("app.contact.message-placeholder")}
+                  minRows={5}
+                  withAsterisk
+                  {...form.getInputProps("message")}
+                />
 
-								<Group justify="flex-end">
-									<Button
-										type="submit"
-										leftSection={<IoMdSend />}
-										loading={isSubmitting}
-										disabled={isSubmitting}
-									>
-										{isSubmitting ? "Sending..." : "Send Message"}
-									</Button>
-								</Group>
-							</form>
-						</Card>
-					</Grid.Col>
-					<Grid.Col span={{ base: 1, md: 2, lg: 2 }}></Grid.Col>
-					<Grid.Col span={{ base: 12, md: 6, lg: 6 }}>
-						<Container>
-							<div>
-								<a href={`tel:${phoneNumber.trim()}`}>
-									<Space h="xl" />
-									<Grid grow justify="center" align="center">
-										<Grid.Col span={{ base: 2, md: 2, lg: 2 }}>
-											<FiPhoneCall color={dark ? "white" : "black"} size={50} />
-										</Grid.Col>
-										<Grid.Col span={{ base: 9, md: 9, lg: 9 }}>
-											<Button
-												fullWidth
-												size="xl"
-												color="blue.9"
-												variant="light"
-												style={{ padding: 0, margin: 0 }}
-											>
-												<Text size="h1" component="h3">
-													<Text fw={700}>{t("app.contact.phone.title")} </Text>
-													<div style={{ padding: 4 }}>{phoneNumber.trim()}</div>
-												</Text>
-											</Button>
-										</Grid.Col>
-									</Grid>
-								</a>
-							</div>
-							<div>
-								<a href={`mailto:${email.trim()}`}>
-									<Space h="xl" />
-									<Grid grow justify="center" align="center">
-										<Grid.Col span={{ base: 2, md: 2, lg: 2 }}>
-											<MdOutlineMailOutline color={dark ? "white" : "black"} size={50} />
-										</Grid.Col>
-										<Grid.Col span={{ base: 9, md: 9, lg: 9 }}>
-											<Button
-												fullWidth
-												size="xl"
-												color="blue.9"
-												variant="light"
-												style={{ padding: 0, margin: 0 }}
-											>
-												<Text size="h1" component="h3">
-													<Text fw={700}>{t("app.contact.email.title")}</Text>
-													<div style={{ padding: 4 }}>{email.trim()}</div>
-												</Text>
-											</Button>
-										</Grid.Col>
-									</Grid>
-								</a>
-							</div>
-							<div>
-								<div onClick={() => window.open(sendMessageWhatsapp, "_blank")}>
-									<Space h="xl" />
-									<Grid grow justify="center" align="center">
-										<Grid.Col span={{ base: 2, md: 2, lg: 2 }}>
-											<FaWhatsapp color={dark ? "white" : "black"} size={50} />
-										</Grid.Col>
-										<Grid.Col span={{ base: 9, md: 9, lg: 9 }}>
-											<Image
-												fit="contain"
-												src={WhatsappAustralia}
-												height={140}
-												width={50}
-											></Image>
-										</Grid.Col>
-									</Grid>
-								</div>
-							</div>
-						</Container>
-					</Grid.Col>
-					<Grid.Col span={{ base: 1, md: 2, lg: 2 }}></Grid.Col>
-				</Grid>
-			</Container>
-		</>
-	);
-};
-
-export default Contact;
+                <Button
+                  color="blue.9"
+                  ta={"center"}
+                  mt="md"
+                  size="md"
+                  radius="md"
+                  type="submit"
+                  loading={loading}
+                  leftSection={<FaPaperPlane size={14} />}
+                  fullWidth
+                >
+                  <ShinyText
+                    text={t("app.contact.send")}
+                    disabled={false}
+                    speed={3}
+                    className="custom-class"
+                  />
+                </Button>
+              </Stack>
+            </form>
+          </Paper>
+        </Box>
+      </Container>
+      <Space h="xl" />
+    </>
+  );
+}

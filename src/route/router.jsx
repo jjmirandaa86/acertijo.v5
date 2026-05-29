@@ -6,7 +6,7 @@ import {
 import Layout from "../components/Layout";
 import Home from "../components/Home";
 import Projects from "../components/Projects";
-import ContactApi from "../components/ContactApi";
+import Contact from "../components/Contact";
 import Certificates from "../components/Certificate";
 import ShowWork from "../components/Projects/ShowWork";
 import NotFound from "../components/NotFound";
@@ -16,7 +16,7 @@ export const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="projects" element={<Projects />} />
-      <Route path="contact" element={<ContactApi />} />
+      <Route path="contact" element={<Contact />} />
       <Route path="certificates" element={<Certificates />} />
       <Route
         path="projects/llamaremovals"
