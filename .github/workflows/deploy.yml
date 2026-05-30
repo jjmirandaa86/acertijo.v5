@@ -1,7 +1,8 @@
 # Secrets en GitHub → Settings → Secrets and variables → Actions:
 #   SSH_KEY         — clave privada SSH del droplet
 #   SERVER_IP       — IP del servidor
-#   ACERTIJO_V5_ENV — contenido completo del .env de producción (ej. VITE_URL_API=https://api.acertijo.dev)
+#   ACERTIJO_V5_ENV — contenido del .env de producción (debe incluir VITE_URL_API=https://api.acertijo.dev).
+#     Se inyecta en runtime vía config.js al arrancar el contenedor (no en el build de Vite).
 name: CI/CD Deploy Web Acertijo.dev
 
 on:
