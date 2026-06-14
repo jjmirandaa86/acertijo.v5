@@ -31,7 +31,10 @@ const ChooseFileCv = ({ mobile }) => {
             radius="xl"
             color="blue"
             onClick={() => {
-              window.open("/assets/pdf/CV-Jefferson Miranda-es.pdf", "_blank");
+              window.open(
+                "/assets/pdf/Jefferson Miranda - Ingeniero de Software Full Stack - ES.pdf",
+                "_blank",
+              );
             }}
             title={t("app.general.mode.title")}
           >
@@ -42,7 +45,10 @@ const ChooseFileCv = ({ mobile }) => {
             radius="xl"
             color="blue"
             onClick={() => {
-              window.open("/assets/pdf/CV-Jefferson Miranda-en.pdf", "_blank");
+              window.open(
+                "/assets/pdf/Jefferson Miranda - Full Stack Software Engineer - EN.pdf",
+                "_blank",
+              );
             }}
             title={t("app.general.mode.title")}
           >
