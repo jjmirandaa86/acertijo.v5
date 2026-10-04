@@ -42,9 +42,9 @@ const LanguageSelector = () => {
       onChange={handleLanguageChange}
       data={data}
       size="xs"
-      w={72}
+      w={50}
       variant="subtle"
-      radius="xl"
+      radius="xs"
       checkIconPosition="right"
       allowDeselect={false}
       comboboxProps={{
@@ -54,8 +54,8 @@ const LanguageSelector = () => {
       styles={{
         input: {
           border: "none",
-          paddingLeft: 8,
-          paddingRight: 8,
+          paddingLeft: 5,
+          paddingRight: 5,
           fontSize: 18,
           background: "transparent",
           cursor: "pointer",

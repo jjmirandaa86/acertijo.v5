@@ -99,7 +99,7 @@ const Layout = () => {
         <AppShell.Header>
           <Container size="md">
             <Space h="md" />
-            <Group h="100%" px="md">
+            <Group h="100%" px="xs">
               <Burger
                 opened={opened}
                 onClick={toggle}

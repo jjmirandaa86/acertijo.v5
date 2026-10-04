@@ -14,7 +14,7 @@ const Mode = () => {
       <ActionIcon
         size="lg"
         radius="xl"
-        color="blue"
+        color="blue.9"
         onClick={() => toggleColorScheme()}
         title={t("app.general.mode.title")}
       >

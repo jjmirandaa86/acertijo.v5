@@ -13,7 +13,7 @@ const Connect = ({ dark }) => {
         </Text>
 
         <Group>
-          <ActionIcon size="lg" radius="xl" color="blue">
+          <ActionIcon size="lg" radius="xl" color="blue.9">
             <a
               href={t("app.footer.connect.gibhub.link")}
               target="_blank"
@@ -23,7 +23,7 @@ const Connect = ({ dark }) => {
             </a>
           </ActionIcon>
 
-          <ActionIcon size="lg" radius="xl" color="blue">
+          <ActionIcon size="lg" radius="xl" color="blue.9">
             <a
               href={t("app.footer.connect.linkedin.link")}
               target="_blank"
@@ -33,7 +33,7 @@ const Connect = ({ dark }) => {
             </a>
           </ActionIcon>
 
-          <ActionIcon size="lg" radius="xl" color="blue">
+          <ActionIcon size="lg" radius="xl" color="blue.9">
             <a
               href={t("app.footer.connect.email.link")}
               target="_blank"
